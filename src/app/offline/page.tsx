@@ -16,7 +16,6 @@ import {
   Phone,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import monasteries from "@/data/monasteries.json";
 import { useI18n } from "@/lib/i18n";
 import {
@@ -159,7 +158,7 @@ export default function OfflinePage() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         <div className="section-padding max-w-3xl mx-auto">
@@ -399,7 +398,6 @@ export default function OfflinePage() {
           </div>
         </div>
       </main>
-      <BottomNav />
-    </>
+    </div>
   );
 }

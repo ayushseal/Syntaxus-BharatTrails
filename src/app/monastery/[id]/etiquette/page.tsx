@@ -26,7 +26,6 @@ import {
   Shield,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import monasteries from "@/data/monasteries.json";
 import { audioEngine } from "@/lib/audioService";
 
@@ -103,7 +102,7 @@ export default function EtiquettePage({
 
   if (!monastery) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col bg-parchment-50">
         <Header />
         <main className="flex-1 flex items-center justify-center pb-24">
           <div className="text-center">
@@ -113,8 +112,7 @@ export default function EtiquettePage({
             <Link href="/" className="btn-heritage">Return Home</Link>
           </div>
         </main>
-        <BottomNav />
-      </>
+      </div>
     );
   }
 
@@ -147,7 +145,7 @@ export default function EtiquettePage({
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         {/* Top bar */}
@@ -287,7 +285,6 @@ export default function EtiquettePage({
           </div>
         )}
       </main>
-      <BottomNav />
-    </>
+    </div>
   );
 }

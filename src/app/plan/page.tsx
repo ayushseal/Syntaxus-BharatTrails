@@ -20,7 +20,6 @@ import {
   BookOpen,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import fallbackMonasteries from "@/data/monasteries.json";
 import fallbackTrails from "@/data/trails.json";
 import { useI18n } from "@/lib/i18n";
@@ -137,7 +136,7 @@ export default function PlanPage() {
   }, 0);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         <div className="section-padding max-w-7xl mx-auto">
@@ -438,7 +437,6 @@ export default function PlanPage() {
           </div>
         </div>
       </main>
-      <BottomNav />
-    </>
+    </div>
   );
 }

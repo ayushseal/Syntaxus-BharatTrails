@@ -17,7 +17,6 @@ import {
   Layers,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import { ConsentBadge } from "@/components/shared/ConsentMetadata";
 import ArchiveReaderModal, { ArchiveRecord } from "@/components/shared/ArchiveReaderModal";
 import monasteries from "@/data/monasteries.json";
@@ -137,7 +136,7 @@ export default function ArchivesPage() {
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         <div className="section-padding max-w-5xl mx-auto">
@@ -385,8 +384,6 @@ export default function ArchivesPage() {
         record={selectedRecord}
         onClose={() => setSelectedRecord(null)}
       />
-
-      <BottomNav />
-    </>
+    </div>
   );
 }

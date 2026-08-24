@@ -41,7 +41,6 @@ import {
   User,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import { ConsentBadge } from "@/components/shared/ConsentMetadata";
 import ArchiveReaderModal, { ArchiveRecord } from "@/components/shared/ArchiveReaderModal";
 import {
@@ -535,7 +534,7 @@ export default function CuratorPortalPage() {
   // ==========================================
   if (!isAuthenticated) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col bg-parchment-50">
         <Header />
         <main className="flex-1 flex items-center justify-center min-h-[75vh] px-4 py-12">
           <div className="max-w-md w-full glass-card p-8 rounded-3xl border border-parchment-300 shadow-2xl animate-fade-in text-center relative overflow-hidden">
@@ -630,8 +629,7 @@ export default function CuratorPortalPage() {
             </div>
           </div>
         </main>
-        <BottomNav />
-      </>
+      </div>
     );
   }
 
@@ -639,7 +637,7 @@ export default function CuratorPortalPage() {
   // AUTHENTICATED CURATOR DASHBOARD
   // ==========================================
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         <div className="section-padding max-w-6xl mx-auto">
@@ -1192,8 +1190,6 @@ export default function CuratorPortalPage() {
           </div>
         </div>
       )}
-
-      <BottomNav />
-    </>
+    </div>
   );
 }

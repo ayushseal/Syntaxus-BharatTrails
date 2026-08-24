@@ -45,7 +45,6 @@ import {
   Navigation,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import {
   ConsentBadge,
   PermissionLabel,
@@ -178,7 +177,7 @@ export default function HeritageSiteProfilePage({
 
   if (loading) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col bg-parchment-50">
         <Header />
         <main className="flex-1 flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
@@ -188,14 +187,13 @@ export default function HeritageSiteProfilePage({
             </p>
           </div>
         </main>
-        <BottomNav />
-      </>
+      </div>
     );
   }
 
   if (!site) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col bg-parchment-50">
         <Header />
         <main className="flex-1 flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
@@ -208,8 +206,7 @@ export default function HeritageSiteProfilePage({
             </Link>
           </div>
         </main>
-        <BottomNav />
-      </>
+      </div>
     );
   }
 
@@ -241,7 +238,7 @@ export default function HeritageSiteProfilePage({
   ];
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         {/* Hero */}
@@ -693,7 +690,6 @@ export default function HeritageSiteProfilePage({
           onClose={() => setSelectedArchive(null)}
         />
       )}
-      <BottomNav />
-    </>
+    </div>
   );
 }

@@ -11,7 +11,6 @@ import {
   Star,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import { useI18n } from "@/lib/i18n";
 
 const milestones = [
@@ -104,7 +103,7 @@ export default function PassportPage() {
   const percentage = Math.round((completedCount / totalCount) * 100);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         <div className="section-padding max-w-3xl mx-auto">
@@ -211,7 +210,6 @@ export default function PassportPage() {
           </div>
         </div>
       </main>
-      <BottomNav />
-    </>
+    </div>
   );
 }

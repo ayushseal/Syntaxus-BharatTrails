@@ -32,7 +32,6 @@ import {
   ConsentBadge,
 } from "@/components/shared/ConsentMetadata";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import monasteries from "@/data/monasteries.json";
 import { audioEngine } from "@/lib/audioService";
 
@@ -425,7 +424,7 @@ export default function VirtualTourPage({
 
   if (!monastery) {
     return (
-      <>
+      <div className="min-h-screen flex flex-col bg-stone-950">
         <Header />
         <main className="flex-1 flex items-center justify-center pb-24">
           <div className="text-center">
@@ -435,8 +434,7 @@ export default function VirtualTourPage({
             <Link href="/" className="btn-heritage">Return Home</Link>
           </div>
         </main>
-        <BottomNav />
-      </>
+      </div>
     );
   }
 
@@ -540,7 +538,7 @@ export default function VirtualTourPage({
   const zoomFactor = (70 / currentFov).toFixed(1);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-stone-950">
       {!isFullscreen && <Header />}
       <main className={`flex-1 ${isFullscreen ? "" : "pb-20"}`}>
         {/* Top Control Bar */}
@@ -857,7 +855,6 @@ export default function VirtualTourPage({
           </div>
         )}
       </main>
-      {!isFullscreen && <BottomNav />}
-    </>
+    </div>
   );
 }

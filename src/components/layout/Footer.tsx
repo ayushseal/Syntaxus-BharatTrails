@@ -27,7 +27,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs text-parchment-300/80 max-w-md leading-relaxed">
-              Open-access national platform for geospatial heritage exploration, 360° virtual preservation, and sustainable community empowerment across India's sacred sanctuaries and hidden gems.
+              Open-access national platform for geospatial heritage exploration, 360° virtual preservation, and sustainable community empowerment across India&apos;s sacred sanctuaries and hidden gems.
             </p>
           </div>
 

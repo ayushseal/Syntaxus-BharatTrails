@@ -19,7 +19,6 @@ import {
   Route,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
-import BottomNav from "@/components/layout/BottomNav";
 import Footer from "@/components/layout/Footer";
 import MonasteryCard from "@/components/monastery/MonasteryCard";
 import fallbackMonasteries from "@/data/monasteries.json";
@@ -74,7 +73,7 @@ export default function HomePage() {
   const heroName = typeof currentHero?.name === "string" ? currentHero.name : (language === "hi" && currentHero?.name?.hi ? currentHero.name.hi : currentHero?.name?.en || currentHero?.id || "Monastery");
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
         {/* Hero Section */}
@@ -409,7 +408,6 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
-      <BottomNav />
-    </>
+    </div>
   );
 }
