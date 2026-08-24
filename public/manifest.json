@@ -1,0 +1,24 @@
+{
+  "name": "SYNTAXUS — Bharat Heritage & Tourism Atlas",
+  "short_name": "SYNTAXUS",
+  "description": "Discover India's uncharted sacred heritage & hidden gems responsibly. Offline-first cultural preservation.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1B4332",
+  "background_color": "#FDFBF7",
+  "categories": ["travel", "education", "culture"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+[
+  {
+    "id": "delhi-imperial-heritage",
+    "name": {
+      "en": "Delhi – Agra Mughal & Sultanate Imperial Circuit",
+      "hi": "दिल्ली – आगरा मुग़ल एवं सल्तनत शाही विरासत सर्किट"
+    },
+    "state": "Delhi",
+    "region": "Northern Frontiers",
+    "description": "Traverse the grand capital corridors of northern India across 6 world-famous monuments — from the 12th-century Qutub Minar, Lodhi Gardens, Agrasen ki Baoli, and Humayun's Tomb to the Red Fort and the Taj Mahal in Agra.",
+    "monasteries": [
+      "qutub",
+      "lodhigardens",
+      "agrasenbaoli",
+      "humayun",
+      "redfort",
+      "tajmahal"
+    ],
+    "totalDistance": "240 km (Delhi Metro & Yamuna Expressway)",
+    "estimatedTime": "3 Days",
+    "difficulty": "Easy (Urban Heritage Circuit)",
+    "startPoint": {
+      "name": "Qutub Minar Metro Station",
+      "lat": 28.5245,
+      "lng": 77.1855
+    },
+    "waypoints": [
+      {
+        "monasteryId": "qutub",
+        "order": 1,
+        "distanceFromPrev": "Start at Qutub Minar",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "lodhigardens",
+        "order": 2,
+        "distanceFromPrev": "11 km",
+        "timeFromPrev": "25 min"
+      },
+      {
+        "monasteryId": "agrasenbaoli",
+        "order": 3,
+        "distanceFromPrev": "4 km",
+        "timeFromPrev": "15 min"
+      },
+      {
+        "monasteryId": "humayun",
+        "order": 4,
+        "distanceFromPrev": "5 km",
+        "timeFromPrev": "15 min"
+      },
+      {
+        "monasteryId": "redfort",
+        "order": 5,
+        "distanceFromPrev": "9 km to Old Delhi",
+        "timeFromPrev": "25 min"
+      },
+      {
+        "monasteryId": "tajmahal",
+        "order": 6,
+        "distanceFromPrev": "210 km (Yamuna Expressway)",
+        "timeFromPrev": "3 hours"
+      }
+    ]
+  },
+  {
+    "id": "bengal-terracotta-princely",
+    "name": {
+      "en": "Bengal Terracotta, Tagore & Princely Heritage Circuit",
+      "hi": "बंगाल टेराकोटा, टैगोर एवं शाही विरासत सर्किट"
+    },
+    "state": "West Bengal",
+    "region": "Eastern Corridors",
+    "description": "Experience the cultural soul of Bengal from Dakshineswar Kali Temple in Kolkata and the 17th-century Malla terracotta temples of Bishnupur, to Tagore's Nobel sanctuary in Shantiniketan, Hazarduari Palace in Murshidabad, and the Italian Renaissance Cooch Behar Palace.",
+    "monasteries": [
+      "dakshineswar",
+      "bishnupur",
+      "shantiniketan",
+      "hazaraduaripalace",
+      "coochbehar"
+    ],
+    "totalDistance": "680 km (Bengal Heritage Corridor)",
+    "estimatedTime": "4 Days",
+    "difficulty": "Moderate (Scenic Heritage Rail/Road)",
+    "startPoint": {
+      "name": "Dakshineswar Temple, Kolkata",
+      "lat": 22.6531,
+      "lng": 88.3575
+    },
+    "waypoints": [
+      {
+        "monasteryId": "dakshineswar",
+        "order": 1,
+        "distanceFromPrev": "Start at Kolkata",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "bishnupur",
+        "order": 2,
+        "distanceFromPrev": "140 km",
+        "timeFromPrev": "3.5 hours"
+      },
+      {
+        "monasteryId": "shantiniketan",
+        "order": 3,
+        "distanceFromPrev": "115 km",
+        "timeFromPrev": "2.5 hours"
+      },
+      {
+        "monasteryId": "hazaraduaripalace",
+        "order": 4,
+        "distanceFromPrev": "130 km",
+        "timeFromPrev": "3 hours"
+      },
+      {
+        "monasteryId": "coochbehar",
+        "order": 5,
+        "distanceFromPrev": "420 km (North Bengal Corridor)",
+        "timeFromPrev": "8 hours / Overnight Train"
+      }
+    ]
+  },
+  {
+    "id": "deccan-kakatiya-sultanate",
+    "name": {
+      "en": "Deccan Sultanates, Kakatiya & Central Forts Circuit",
+      "hi": "दक्कन सल्तनत, काकतीय एवं मध्य दुर्ग सर्किट"
+    },
+    "state": "Telangana",
+    "region": "Southern Peninsula",
+    "description": "An epic journey across the great medieval kingdoms of the Deccan Plateau — from Golconda Fort and UNESCO Ramappa Temple in Telangana, through the triple-moated fortress of Bidar and Gol Gumbaz in Karnataka, to the rock-cut caves of Undavalli in Andhra Pradesh and the mighty hill fortress of Panhala in Maharashtra.",
+    "monasteries": [
+      "golconda",
+      "ramappa",
+      "bidar",
+      "golgumbaz",
+      "undavalli",
+      "panhala"
+    ],
+    "totalDistance": "680 km (Deccan Heritage Expressway Network)",
+    "estimatedTime": "5 Days",
+    "difficulty": "Moderate (Heritage Road Circuit)",
+    "startPoint": {
+      "name": "Golconda Fort, Hyderabad",
+      "lat": 17.3833,
+      "lng": 78.4011
+    },
+    "waypoints": [
+      {
+        "monasteryId": "golconda",
+        "order": 1,
+        "distanceFromPrev": "Start at Hyderabad",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "ramappa",
+        "order": 2,
+        "distanceFromPrev": "180 km to Palampet",
+        "timeFromPrev": "3.5 hours"
+      },
+      {
+        "monasteryId": "bidar",
+        "order": 3,
+        "distanceFromPrev": "260 km",
+        "timeFromPrev": "4.5 hours"
+      },
+      {
+        "monasteryId": "golgumbaz",
+        "order": 4,
+        "distanceFromPrev": "210 km to Vijayapura",
+        "timeFromPrev": "3.5 hours"
+      },
+      {
+        "monasteryId": "undavalli",
+        "order": 5,
+        "distanceFromPrev": "320 km to Vijayawada",
+        "timeFromPrev": "5 hours"
+      },
+      {
+        "monasteryId": "panhala",
+        "order": 6,
+        "distanceFromPrev": "380 km to Kolhapur",
+        "timeFromPrev": "6 hours"
+      }
+    ]
+  },
+  {
+    "id": "south-india-wonders",
+    "name": {
+      "en": "Chola, Vijayanagara & Coastal South India Heritage Circuit",
+      "hi": "चोल, विजयनगर एवं तटीय दक्षिण भारत विरासत सर्किट"
+    },
+    "state": "Karnataka",
+    "region": "Southern Peninsula",
+    "description": "Discover the architectural pinnacles of Southern India — from the boulder-strewn capital of the Vijayanagara Empire at Hampi and the crimson cliffs of Gandikota canyon, to the granite Brihadisvara Chola temple in Thanjavur and the coastal bastions of Bekal Fort and St. Mary's Islands.",
+    "monasteries": [
+      "hampi",
+      "gandikota",
+      "thanjavur",
+      "stmarys",
+      "bekal"
+    ],
+    "totalDistance": "850 km (Peninsular Heritage Network)",
+    "estimatedTime": "5 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Hampi UNESCO World Heritage Site",
+      "lat": 15.335,
+      "lng": 76.46
+    },
+    "waypoints": [
+      {
+        "monasteryId": "hampi",
+        "order": 1,
+        "distanceFromPrev": "Start at Hampi",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "gandikota",
+        "order": 2,
+        "distanceFromPrev": "240 km",
+        "timeFromPrev": "4.5 hours"
+      },
+      {
+        "monasteryId": "thanjavur",
+        "order": 3,
+        "distanceFromPrev": "450 km",
+        "timeFromPrev": "7.5 hours"
+      },
+      {
+        "monasteryId": "stmarys",
+        "order": 4,
+        "distanceFromPrev": "420 km to Malpe Coast",
+        "timeFromPrev": "7 hours"
+      },
+      {
+        "monasteryId": "bekal",
+        "order": 5,
+        "distanceFromPrev": "110 km to Kasaragod",
+        "timeFromPrev": "2.5 hours"
+      }
+    ]
+  },
+  {
+    "id": "bihar-buddhist-circuit",
+    "name": {
+      "en": "Bihar Sacred Buddhist & Ancient Universities Circuit",
+      "hi": "बिहार पवित्र बौद्ध एवं प्राचीन विश्वविद्यालय सर्किट"
+    },
+    "state": "Bihar",
+    "region": "Eastern Corridors",
+    "description": "Trace the spiritual footprints of Lord Buddha from the Enlightenment Seat under the Mahabodhi Tree in Bodh Gaya to the 5th-century Mahavihara University of Nalanda.",
+    "monasteries": [
+      "mahabodhi",
+      "nalanda"
+    ],
+    "totalDistance": "95 km (Bodh Gaya – Rajgir – Nalanda Highway)",
+    "estimatedTime": "2 Days",
+    "difficulty": "Easy",
+    "startPoint": {
+      "name": "Mahabodhi Temple, Bodh Gaya",
+      "lat": 24.6959,
+      "lng": 84.9914
+    },
+    "waypoints": [
+      {
+        "monasteryId": "mahabodhi",
+        "order": 1,
+        "distanceFromPrev": "Start at Bodh Gaya",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "nalanda",
+        "order": 2,
+        "distanceFromPrev": "95 km",
+        "timeFromPrev": "2 hours"
+      }
+    ]
+  },
+  {
+    "id": "maharashtra-rockcut-caves",
+    "name": {
+      "en": "Maharashtra UNESCO Rock-Cut Caves & Citadel Circuit",
+      "hi": "महाराष्ट्र यूनेस्को रॉक-कट गुफाएं एवं दुर्ग सर्किट"
+    },
+    "state": "Maharashtra",
+    "region": "Western & Central",
+    "description": "Explore the world's most monumental rock-cut architectures — from the 2nd-century BCE murals of Ajanta and the monolithic Kailasa Temple at Ellora, to the impenetrable hilltop citadel of Daulatabad and the ancient Lonar meteorite impact lake.",
+    "monasteries": [
+      "ajanta",
+      "ellora",
+      "daulatabad",
+      "lonar"
+    ],
+    "totalDistance": "310 km (Marathwada Heritage Highway)",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Ajanta Caves Complex",
+      "lat": 20.5519,
+      "lng": 75.7033
+    },
+    "waypoints": [
+      {
+        "monasteryId": "ajanta",
+        "order": 1,
+        "distanceFromPrev": "Start at Ajanta",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "daulatabad",
+        "order": 2,
+        "distanceFromPrev": "95 km",
+        "timeFromPrev": "2 hours"
+      },
+      {
+        "monasteryId": "ellora",
+        "order": 3,
+        "distanceFromPrev": "15 km",
+        "timeFromPrev": "25 min"
+      },
+      {
+        "monasteryId": "lonar",
+        "order": 4,
+        "distanceFromPrev": "160 km",
+        "timeFromPrev": "3.5 hours"
+      }
+    ]
+  },
+  {
+    "id": "madhya-pradesh-stupas-temples",
+    "name": {
+      "en": "Central India UNESCO Stupas & Khajuraho Temple Circuit",
+      "hi": "मध्य भारत यूनेस्को स्तूप एवं खजुराहो मंदिर सर्किट"
+    },
+    "state": "Madhya Pradesh",
+    "region": "Western & Central",
+    "description": "Discover the 3rd-century BCE Great Stupa of Sanchi, the Paleolithic rock shelters of Bhimbetka, and the Nagara-style sculpted temples of Khajuraho.",
+    "monasteries": [
+      "bhimbetka",
+      "sanchi",
+      "khajuraho"
+    ],
+    "totalDistance": "420 km",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Bhimbetka Caves, Raisen",
+      "lat": 22.9372,
+      "lng": 77.6128
+    },
+    "waypoints": [
+      {
+        "monasteryId": "bhimbetka",
+        "order": 1,
+        "distanceFromPrev": "Start at Bhimbetka",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "sanchi",
+        "order": 2,
+        "distanceFromPrev": "90 km",
+        "timeFromPrev": "2 hours"
+      },
+      {
+        "monasteryId": "khajuraho",
+        "order": 3,
+        "distanceFromPrev": "330 km",
+        "timeFromPrev": "6 hours"
+      }
+    ]
+  },
+  {
+    "id": "northeast-living-wonders",
+    "name": {
+      "en": "Northeast India Living Bio-Wonders & Himalayan Trail",
+      "hi": "पूर्वोत्तर भारत सजीव जैव-चमत्कार एवं हिमालयन ट्रेल"
+    },
+    "state": "Meghalaya",
+    "region": "North-Eastern",
+    "description": "From the bio-engineered Double Decker Living Root Bridges of Nongriat to the towering 17th-century Tawang Monastery, sacred Gurudongmar Lake, the rock-cut reliefs of Unakoti, and the floating phumdis of Loktak Lake.",
+    "monasteries": [
+      "nongriat",
+      "tawang",
+      "gurudongmar",
+      "unakoti",
+      "loktak",
+      "rumtek"
+    ],
+    "totalDistance": "1,450 km (Northeast Exploration Network)",
+    "estimatedTime": "8 Days",
+    "difficulty": "Challenging (High Altitude Mountain Passes)",
+    "startPoint": {
+      "name": "Nongriat Root Bridges, Cherrapunji",
+      "lat": 25.2505,
+      "lng": 91.6743
+    },
+    "waypoints": [
+      {
+        "monasteryId": "nongriat",
+        "order": 1,
+        "distanceFromPrev": "Start at Cherrapunji",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "unakoti",
+        "order": 2,
+        "distanceFromPrev": "310 km",
+        "timeFromPrev": "7 hours"
+      },
+      {
+        "monasteryId": "loktak",
+        "order": 3,
+        "distanceFromPrev": "290 km",
+        "timeFromPrev": "6.5 hours"
+      },
+      {
+        "monasteryId": "rumtek",
+        "order": 4,
+        "distanceFromPrev": "Gangtok Flight / Road",
+        "timeFromPrev": "Day 5"
+      },
+      {
+        "monasteryId": "gurudongmar",
+        "order": 5,
+        "distanceFromPrev": "180 km North Sikkim",
+        "timeFromPrev": "6 hours"
+      },
+      {
+        "monasteryId": "tawang",
+        "order": 6,
+        "distanceFromPrev": "Western Arunachal Transit",
+        "timeFromPrev": "Day 7"
+      }
+    ]
+  },
+  {
+    "id": "mewar-malwa-citadels",
+    "name": {
+      "en": "Mewar & Malwa Royal Citadel Circuit",
+      "hi": "मेवाड़ एवं मालवा शाही दुर्ग सर्किट"
+    },
+    "state": "Rajasthan",
+    "region": "Western & Central",
+    "description": "Experience Rajput and Afghan royal architecture across Rajasthan and Madhya Pradesh — Udaipur City Palace, Chittorgarh Hill Fort, and the floating Jahaz Mahal of Mandu.",
+    "monasteries": [
+      "udaipurpalace",
+      "chittorgarh",
+      "mandu"
+    ],
+    "totalDistance": "450 km",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "City Palace, Udaipur",
+      "lat": 24.5764,
+      "lng": 73.6835
+    },
+    "waypoints": [
+      {
+        "monasteryId": "udaipurpalace",
+        "order": 1,
+        "distanceFromPrev": "Start at Udaipur",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "chittorgarh",
+        "order": 2,
+        "distanceFromPrev": "115 km",
+        "timeFromPrev": "2 hours"
+      },
+      {
+        "monasteryId": "mandu",
+        "order": 3,
+        "distanceFromPrev": "330 km",
+        "timeFromPrev": "6 hours"
+      }
+    ]
+  },
+  {
+    "id": "chhattisgarh-heritage-waterfalls",
+    "name": {
+      "en": "Chhattisgarh Sacred Temples & Tribal Waterfalls Circuit",
+      "hi": "छत्तीसगढ़ पवित्र मंदिर एवं जनजातीय जलप्रपात सर्किट"
+    },
+    "state": "Chhattisgarh",
+    "region": "Eastern Corridors",
+    "description": "Journey through Chhattisgarh's hidden gems: the 11th-century Nagara Bhoramdeo Temple, 7th-century terracotta complex of Sirpur, and the colossal Chitrakote horseshoe falls in Bastar.",
+    "monasteries": [
+      "bhoramdeo",
+      "sirpur",
+      "chitrakote"
+    ],
+    "totalDistance": "490 km",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Bhoramdeo Temple, Kawardha",
+      "lat": 22.1189,
+      "lng": 81.1578
+    },
+    "waypoints": [
+      {
+        "monasteryId": "bhoramdeo",
+        "order": 1,
+        "distanceFromPrev": "Start at Kawardha",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "sirpur",
+        "order": 2,
+        "distanceFromPrev": "165 km",
+        "timeFromPrev": "3.5 hours"
+      },
+      {
+        "monasteryId": "chitrakote",
+        "order": 3,
+        "distanceFromPrev": "325 km",
+        "timeFromPrev": "6.5 hours"
+      }
+    ]
+  },
+  {
+    "id": "sahyadri-konkan-maratha",
+    "name": {
+      "en": "Sahyadri & Konkan Maratha Heritage Circuit",
+      "hi": "सह्याद्रि एवं कोंकण मराठा विरासत सर्किट"
+    },
+    "state": "Maharashtra",
+    "region": "Western & Central",
+    "description": "Explore the sea-carved Trimurti sculptures of Elephanta Caves, Chhatrapati Shivaji Maharaj's capital at Raigad Fort, and the UNESCO wildflower plateau of Kaas in Satara.",
+    "monasteries": [
+      "elephantacaves",
+      "raigadfort",
+      "kaasplateau"
+    ],
+    "totalDistance": "320 km",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Elephanta Caves, Mumbai Harbour",
+      "lat": 18.9633,
+      "lng": 72.9315
+    },
+    "waypoints": [
+      {
+        "monasteryId": "elephantacaves",
+        "order": 1,
+        "distanceFromPrev": "Start at Gateway of India",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "raigadfort",
+        "order": 2,
+        "distanceFromPrev": "150 km",
+        "timeFromPrev": "3.5 hours"
+      },
+      {
+        "monasteryId": "kaasplateau",
+        "order": 3,
+        "distanceFromPrev": "170 km",
+        "timeFromPrev": "4 hours"
+      }
+    ]
+  },
+  {
+    "id": "southern-tip-malabar-circuit",
+    "name": {
+      "en": "Southern Tip & Malabar Spice Coast Circuit",
+      "hi": "दक्षिणी छोर एवं मालाबार तट सर्किट"
+    },
+    "state": "Kerala",
+    "region": "Southern Peninsula",
+    "description": "From the spice docks and Chinese fishing nets of Fort Kochi to Sree Padmanabhaswamy Temple in Thiruvananthapuram, the three-ocean confluence at Kanyakumari, and the majestic gopurams of Madurai Meenakshi Temple.",
+    "monasteries": [
+      "fortkochi",
+      "padmanabhaswamy",
+      "kanyakumari",
+      "maduraimeenakshi"
+    ],
+    "totalDistance": "470 km",
+    "estimatedTime": "4 Days",
+    "difficulty": "Easy",
+    "startPoint": {
+      "name": "Fort Kochi Promenade",
+      "lat": 9.9658,
+      "lng": 76.2422
+    },
+    "waypoints": [
+      {
+        "monasteryId": "fortkochi",
+        "order": 1,
+        "distanceFromPrev": "Start at Fort Kochi",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "padmanabhaswamy",
+        "order": 2,
+        "distanceFromPrev": "210 km",
+        "timeFromPrev": "4.5 hours"
+      },
+      {
+        "monasteryId": "kanyakumari",
+        "order": 3,
+        "distanceFromPrev": "90 km",
+        "timeFromPrev": "2 hours"
+      },
+      {
+        "monasteryId": "maduraimeenakshi",
+        "order": 4,
+        "distanceFromPrev": "245 km",
+        "timeFromPrev": "4.5 hours"
+      }
+    ]
+  },
+  {
+    "id": "sikkim-himalayan-sacred-trail",
+    "name": {
+      "en": "Sikkim Sacred Himalayan Monastic & Alpine Trail",
+      "hi": "सिक्किम पवित्र हिमालयन मठ एवं अल्पाइन मार्ग"
+    },
+    "state": "Sikkim",
+    "region": "North-Eastern",
+    "description": "Explore the spiritual heart of Sikkim from the world-renowned Kagyu seat of Rumtek Monastery, through the ancient mountain valleys to Gurudongmar Sacred Glacial Lake and the high-altitude frontier of Tawang.",
+    "monasteries": [
+      "rumtek",
+      "gurudongmar",
+      "tawang"
+    ],
+    "totalDistance": "240 km",
+    "estimatedTime": "3 Days",
+    "difficulty": "Moderate",
+    "startPoint": {
+      "name": "Rumtek Monastery, Gangtok",
+      "lat": 27.2889,
+      "lng": 88.5614
+    },
+    "waypoints": [
+      {
+        "monasteryId": "rumtek",
+        "order": 1,
+        "distanceFromPrev": "Start at Gangtok",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "gurudongmar",
+        "order": 2,
+        "distanceFromPrev": "180 km",
+        "timeFromPrev": "6 hours"
+      },
+      {
+        "monasteryId": "tawang",
+        "order": 3,
+        "distanceFromPrev": "520 km",
+        "timeFromPrev": "10 hours"
+      }
+    ]
+  },
+  {
+    "id": "kailash-manasarovar-sacred-yatra",
+    "name": {
+      "en": "Trans-Himalayan & Kailash Sacred Alpine Trail",
+      "hi": "ट्रांस-हिमालयन एवं कैलाश पवित्र अल्पाइन सर्किट"
+    },
+    "state": "Uttarakhand",
+    "region": "Northern Frontiers",
+    "description": "The supreme trans-Himalayan pilgrimage corridor connecting Uttarakhand's UNESCO Valley of Flowers, Sikkim's Gurudongmar Lake, Ladakh's Nubra Valley dunes, and the sacred Lake Manasarovar at the foot of Mount Kailash.",
+    "monasteries": [
+      "valleyofflowers",
+      "manasarovar",
+      "nubra",
+      "gurudongmar"
+    ],
+    "totalDistance": "890 km",
+    "estimatedTime": "8 Days",
+    "difficulty": "Challenging (High Altitude Yatra)",
+    "startPoint": {
+      "name": "Govindghat / Joshimath",
+      "lat": 30.6278,
+      "lng": 79.5606
+    },
+    "waypoints": [
+      {
+        "monasteryId": "valleyofflowers",
+        "order": 1,
+        "distanceFromPrev": "Start at Govindghat",
+        "timeFromPrev": "Day 1 Morning"
+      },
+      {
+        "monasteryId": "manasarovar",
+        "order": 2,
+        "distanceFromPrev": "415 km Trans-Himalayan Ascent",
+        "timeFromPrev": "Day 3–4 Ascent"
+      },
+      {
+        "monasteryId": "nubra",
+        "order": 3,
+        "distanceFromPrev": "520 km",
+        "timeFromPrev": "Day 5–6 Transit"
+      },
+      {
+        "monasteryId": "gurudongmar",
+        "order": 4,
+        "distanceFromPrev": "650 km",
+        "timeFromPrev": "Day 7–8 Transit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,328 @@
+[
+  {
+    "id": "man-1",
+    "title": "Consecration Scroll of Phuntsok Namgyal (1642)",
+    "titleNative": "ཕུན་ཚོགས་རྣམ་རྒྱལ་གྱི་མངའ་གསོལ་བཀའ་ཤོག",
+    "type": "manuscript",
+    "monastery": "Pemayangtse Monastery",
+    "era": "1642 CE",
+    "language": "Classical Tibetan (Uchen Script)",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-02-15",
+    "lastReviewDate": "2024-06-30",
+    "curator": "Abbot Sonam Gyatso",
+    "archivalRef": "SKM-EC-PEM-1642-001",
+    "dimensions": "42 cm × 185 cm, Handmade Daphne paper (Dey-sho)",
+    "summary": "Original consecration treaty and benediction scroll marking the unification of Sikkim and the enthronement of the first Chogyal at Norbugang, Yuksom.",
+    "fullContent": "In the Water-Horse Year (1642 CE), according to the visionary prophecy of Guru Padmasambhava, three illustrious master lamas converged from the three cardinal directions upon the sacred pine grove of Norbugang in Yuksom. Lama Lhatsun Chenpo arrived from the south via the mist of Dzongri; Lama Ngadak Sempa Chenpo journeyed from the west; and Lama Kathok Kuntu Zangpo descended from the north. \n\nFinding that none among them should claim temporal sovereignty over the sacred hidden land of 'Beyul Denzong', they dispatched seekers eastward to find the prophesied ruler named Phuntsok from the Mi-nyak house. Phuntsok Namgyal was discovered and brought to Norbugang, where upon a throne of quarried stone, the three holy lamas anointed him with water from a golden urn, consecrating him as the Dharma King (Chogyal) of Sikkim.\n\nThis scroll records the solemn covenants between the Monastic Order and the Royal House: that the spiritual welfare of the land shall be safeguarded without worldly corruption, that the sacred peaks of Kanchenjunga shall forever be revered as guardian deities, and that Pemayangtse shall remain the supreme seat for the crown's blessing rituals.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །ཆོས་རྒྱལ་ཕུན་ཚོགས་རྣམ་རྒྱལ་མཆོག་འབྲས་ལྗོངས་ལྷ་མིའི་སྤྱི་ནོར་དུ་མངའ་གསོལ་བའི་བཀའ་གཙིགས་ཡིག་ཆ་བཞུགས་སོ།།",
+      "englishNotes": "Translated by Dr. Anna Balikci-Denjongpa, Namgyal Institute of Tibetology. Verified against woodblock print archives."
+    },
+    "provenanceChain": [
+      "1642: Consecrated at Norbugang Coronation Throne",
+      "1705: Transferred to Pemayangtse Treasury upon monastery founding",
+      "1978: Catalogued by Sikkim Ecclesiastical Department",
+      "2024: High-resolution digital capture approved by Monastery Council"
+    ]
+  },
+  {
+    "id": "man-2",
+    "title": "Bumchu Hydro-Divination Chronicle (18th Century)",
+    "titleNative": "བུམ་ཆུའི་ལོ་རྒྱུས་དང་ཆུ་བརྟག་མན་ངག",
+    "type": "manuscript",
+    "monastery": "Tashiding Monastery",
+    "era": "Circa 1740 CE",
+    "language": "Classical Tibetan (Ume & Uchen Scripts)",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-01-10",
+    "lastReviewDate": "2024-05-20",
+    "curator": "Lama Rinchen Dorje",
+    "archivalRef": "SKM-EC-TSH-1740-004",
+    "dimensions": "Loose-leaf Pecha (14 cm × 56 cm), 28 folios",
+    "summary": "Sacred ritual text detailing the preparation, sealing, opening, and predictive hydro-divination protocol of the consecrated Bumchu vase at Tashiding.",
+    "fullContent": "The chronicle opens with the transmission lineage of Guru Padmasambhava, who consecrated the sacred brass urn with holy waters drawn from the four great celestial rivers and blessed it with thousand-fold longevity mantras.\n\nThe text outlines the exact procedure observed on the 14th and 15th nights of the first Tibetan lunar month:\n1. The sealed reliquary room within Tashiding's inner sanctum is opened only in the presence of designated state representatives and senior monastic stewards.\n2. The unbroken clay and silk seals of the previous year are examined for integrity.\n3. The level of water in the sacred vase is measured against three sacred markers:\n   - If the water is full to the brim: Peace, abundant monsoon, bountiful cardamom and rice harvests.\n   - If the water has decreased: Drought, famine, or strife across the Himalayan valleys.\n   - If the water has increased and is crystal clear: A year of great spiritual renewal and peace.\n4. Three cupfuls of the holy water are distributed to pilgrims; three cupfuls of fresh mountain water from Rathong Chu are replenished; and the vessel is resealed under ritual prayer until the following year.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །བཀྲ་ཤིས་ལྡིང་གི་གསང་ཆེན་བུམ་པའི་ཆུ་བརྟག་ཚུལ་གསལ་བར་བཀོད་པའི་དཀར་ཆག་བཞུགས་སོ།།",
+      "englishNotes": "Approved for public educational access by Tashiding Monastic Council. The private esoteric mantras remain restricted to initiated monks."
+    },
+    "provenanceChain": [
+      "1740: Authored by Ngadak Choegyal",
+      "1910: Re-bound in brocade under Chogyal Thutob Namgyal",
+      "2024: Digital preservation approved for SYNTAXUS"
+    ]
+  },
+  {
+    "id": "man-3",
+    "title": "Denzong Ney-Yig — Guide to Sacred Hidden Valleys",
+    "titleNative": "འབྲས་ལྗོངས་གནས་ཡིག་མཐོང་བ་དོན་ལྡན།",
+    "type": "manuscript",
+    "monastery": "Enchey & Pemayangtse Archives",
+    "era": "17th Century / 1880 Edition",
+    "language": "Tibetan with Sikkimese annotations",
+    "source": "researcher-reviewed",
+    "sensitivity": "Public",
+    "approvedDate": "2024-03-12",
+    "lastReviewDate": "2024-07-22",
+    "curator": "Prof. Karma Lhaki",
+    "archivalRef": "SKM-NIT-DEN-1880-019",
+    "dimensions": "Accordion book (Leptri format), 64 pages with illustrated cave maps",
+    "summary": "Pilgrim's guide describing the four sacred caves of Sikkim (Lhari Nyingphug, Dechhenphug, Pephug, and Kando Sangphug) and their meditation significance.",
+    "fullContent": "Sikkim is venerated across the Buddhist world as 'Beyul Denzong'—the hidden valley of rice blessed by Guru Padmasambhava as a sanctuary in times of spiritual adversity. This guide documents the four great sacred caves aligned with the four cardinal directions around Mount Kanchenjunga:\n\n- North: Lhari Nyingphug ('The Cave of God's Heart') — Accessible only after arduous trek through high alpine meadows; renowned for sublime crystal rock formations.\n- South: Dechhenphug ('The Cave of Great Bliss') — Situated near Ravangla; consecrated for meditation on the wrathful deity Vajrakilaya.\n- East: Pephug ('The Secret Cave') — Hidden deep in the Teesta gorge, guarded by sacred hot springs (Chachu).\n- West: Kando Sangphug ('The Cave of the Secret Dakini') — Near Legship, celebrated for natural sulfur springs where pilgrims perform ritual purification.\n\nThe manuscript offers ethical admonitions to every traveler: 'Enter with an empty mind, leave no defilement, do not dislodge the living rocks, and honor the forest spirits who keep watch.'",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །སྦས་ཡུལ་འབྲས་མོ་ལྗོངས་ཀྱི་གནས་ཆེན་བཞི་དང་ཕྲན་བཅས་ཀྱི་ངོ་སྤྲོད་གསལ་བའི་ལམ་སྟོན།།",
+      "englishNotes": "Preserved at Namgyal Institute of Tibetology; cross-referenced with regional monastic elders."
+    },
+    "provenanceChain": [
+      "17th c.: Visionary guide attributed to Lhatsun Namkha Jigme",
+      "1880: Woodblock reprint at Pemayangtse monastery printing house",
+      "2024: Digital accessioned for Sikkim Cultural Heritage Registry"
+    ]
+  },
+  {
+    "id": "thang-1",
+    "title": "Guru Padmasambhava Eight Manifestations Thangka",
+    "titleNative": "གུ་རུ་མཚན་བརྒྱད་ཀྱི་ཞལ་ཐང་།",
+    "type": "thangka",
+    "monastery": "Rumtek Monastery Collection",
+    "era": "Late 18th Century",
+    "language": "Mineral Pigment & Gold on Cotton",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-03-20",
+    "lastReviewDate": "2024-07-15",
+    "curator": "Head Lama Rumtek",
+    "archivalRef": "SKM-RTK-THA-1780-012",
+    "dimensions": "85 cm × 140 cm, Framed in handwoven Chinese silk brocade",
+    "summary": "Masterpiece silk painting depicting Guru Rinpoche seated on an open lotus in the copper-colored mountain paradise, encircled by his eight divine manifestations.",
+    "fullContent": "This revered thangka presents Guru Rinpoche in his central form as Padmaraja (Pema Jungne), holding the vajra in his right hand and a skull-cup filled with the nectar of immortality in his left, with the sacred trident-staff (khatvanga) cradled in his crook.\n\nSurrounding the central deity are the Eight Manifestations representing his transformative deeds throughout the Buddhist realms:\n1. Guru Tsokye Dorje: The lotus-born peaceful master holding the vajra at his heart.\n2. Guru Shakya Senge: The lion of the Sakyas, dressed in the saffron monastic robes of the historical Buddha.\n3. Guru Nyima Ozer: The sunbeam master holding the khatvanga, dispelling darkness.\n4. Guru Padmasambhava: The master of Oddiyana dressed in white robes holding the urn of wisdom.\n5. Guru Loden Chokse: The master of learning and royal attire holding the damaru drum.\n6. Guru Pema Gyalpo: The lotus king adorned with jewels and holding the mirror of pristine awareness.\n7. Guru Senge Dradok: The wrathful blue master subduing demons of ego with thunderous mantras.\n8. Guru Dorje Drolo: The supreme wrathful manifestation riding a pregnant tigress across Himalayan cliffs, subduing malevolent spirits.\n\nPigments used include crushed lapis lazuli (deep blue), malachite (forest green), cinnabar (sacred red), and pure 24k gold leaf lining.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །གུ་རུ་རིན་པོ་ཆེའི་སྐུ་བརྙན་བྱིན་ཅན་གསེར་ཐང་མཐོང་གྲོལ་མཆོག",
+      "englishNotes": "High-resolution colorimetric scan calibrated under archival LED illumination."
+    },
+    "provenanceChain": [
+      "1780: Painted by royal master-artist Karma Tenzing",
+      "1966: Brought to Rumtek and blessed by the 16th Karmapa",
+      "2024: High-definition zoomable conservation capture verified"
+    ]
+  },
+  {
+    "id": "thang-2",
+    "title": "Wheel of Existence (Bhavachakra) — Entrance Mural",
+    "titleNative": "སྲིད་པའི་འཁོར་ལོའི་ལྡེབས་རིས།",
+    "type": "thangka",
+    "monastery": "Enchey Monastery",
+    "era": "1909 CE (Original Fresco)",
+    "language": "Natural Mineral Wall Mural",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-05-10",
+    "lastReviewDate": "2024-08-01",
+    "curator": "Curator Pema Dorji",
+    "archivalRef": "SKM-ENC-MUR-1909-003",
+    "dimensions": "280 cm × 280 cm, Outer veranda portico wall",
+    "summary": "Iconic mural fresco greeting visitors at Enchey, illustrating the Buddhist psychological cosmos, the six realms of rebirth, and the twelve links of dependent origination.",
+    "fullContent": "Painted in 1909 during the reconstruction of Enchey Monastery, this grand mural serves as the primary visual teaching for pilgrims before crossing into the inner shrine.\n\nThe mural depicts the entire wheel held within the clutches of Yama, the Lord of Death, signifying that unawakened existence is impermanent:\n- Hub: Three creatures biting each other's tails: a pig (ignorance), a snake (aversion/anger), and a bird (attachment/desire)—the root causes of suffering.\n- Second Circle: The paths of virtue (souls ascending toward light) and unwholesomeness (souls tumbling downward).\n- Third Circle (The Six Realms):\n  1. Realm of the Devas (Pleasure & complacency)\n  2. Realm of Asuras (Jealousy & conflict)\n  3. Realm of Humans (Opportunity for Dharma practice)\n  4. Realm of Animals (Instinct & servitude)\n  5. Realm of Pretas / Hungry Ghosts (Insatiable longing)\n  6. Realm of Hells (Anger and extreme suffering)\n- Rim (Twelve Nidanas): 12 symbolic panels illustrating dependent origination, from the blind person (ignorance) to the funeral bier (death).",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །རྟེན་ཅིང་འབྲེལ་བར་འབྱུང་བའི་སྲིད་པའི་འཁོར་ལོ་ཆེན་པོ།",
+      "englishNotes": "Mural restored in 2018 using traditional organic binders and mineral pigments."
+    },
+    "provenanceChain": [
+      "1909: Painted on lime plaster by Gangtok artisan guild",
+      "2018: State heritage conservation and surface consolidation",
+      "2024: Digital twin & descriptive citation record registered"
+    ]
+  },
+  {
+    "id": "art-1",
+    "title": "Ancient Ritual Bell (Drilbu) and Dorje of Tashiding",
+    "titleNative": "བཀྲ་ཤིས་ལྡིང་གི་རྡོ་རྗེ་དྲིལ་བུ་རྙིང་མ།",
+    "type": "artifact",
+    "monastery": "Tashiding Monastery",
+    "era": "1641 CE",
+    "language": "Bronze & Bell Metal (Panchaloha alloy)",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-01-10",
+    "lastReviewDate": "2024-05-20",
+    "curator": "Lama Gyaltsen Bhutia",
+    "archivalRef": "SKM-TSH-ART-1641-002",
+    "dimensions": "Bell: 19 cm height × 11.5 cm diameter; Dorje: 13.5 cm length",
+    "summary": "Sacred ceremonial vajra and bell ensemble used by founding Lama Ngadak Sempa Chenpo to consecrate the sanctified perimeter of Tashiding.",
+    "fullContent": "Cast from an eight-metal sacred alloy (including copper, silver, gold, and meteorite iron), this matched set represents the inseparable union of Method (Compassion/Vajra) and Wisdom (Emptiness/Bell).\n\nThe upper handle of the bell features the crowned head of Prajnaparamita, the Mother of all Buddhas, with a five-pronged lotus crown. The body of the bell is engraved with the eight auspicious symbols (Ashtamangala) and protective mantra syllables in Lantsa script. Its acoustic resonance sustains for over 22 seconds, producing an overtone series associated with deep meditative absorption.\n\nTradition holds that this bell was sounded from the hilltop during the foundation ceremony in 1641, and its tone echoed all the way to the Rangeet and Rathong river confluence, blessing the waters for generations to come.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །ཐབས་ཤེས་ཟུང་འཇུག་རྡོ་རྗེ་དྲིལ་བུ་བྱིན་རླབས་ཅན།",
+      "englishNotes": "Acoustic spectrum documented; physical artifact secured in monastery reliquary safe."
+    },
+    "provenanceChain": [
+      "1641: Consecrated by Lama Ngadak Sempa",
+      "1950: Documented by Sikkim Royal Antiquities Office",
+      "2024: 3D photogrammetric record approved for preservation catalog"
+    ]
+  },
+  {
+    "id": "art-2",
+    "title": "Mahakala Sacred Cham Dance Mask",
+    "titleNative": "མགོན་པོ་བེར་ནག་ཅན་གྱི་འཆམ་ཞལ།",
+    "type": "artifact",
+    "monastery": "Ralang & Enchey Collections",
+    "era": "Early 20th Century",
+    "language": "Carved Himalayan Birch & Natural Lacquer",
+    "source": "community-contributed",
+    "sensitivity": "Public",
+    "approvedDate": "2024-04-01",
+    "lastReviewDate": "2024-07-10",
+    "curator": "Curator Wangchuk Bhutia",
+    "archivalRef": "SKM-RAL-MSK-1915-007",
+    "dimensions": "52 cm height × 38 cm width × 26 cm depth; Weight: 2.8 kg",
+    "summary": "Sacred wooden ritual mask of Mahakala, the fierce protector of the Kagyu lineage, donned by master dancers during annual year-end Cham rituals.",
+    "fullContent": "Hand-carved from seasoned Himalayan birch (Bhojpatra wood) and treated with natural insect-repellent herbal resins, this mask is crowned with five skulls representing the transmutation of the five poisons (ignorance, anger, pride, attachment, jealousy) into the five transcendent wisdoms.\n\nThe third eye of pristine wisdom is carved prominently upon the brow, while the open fanged mouth represents the destruction of deceit and ignorance. Worn exclusively by monks who have completed three-year solitary retreats, the mask is considered an active sacred vessel during the dance, where the dancer dissolves personal identity into the divine protective energy of Mahakala.\n\nOutside the festival periods, the mask is stored with ceremonial silk scarves inside the monastery's Gonkhang (Protector Chapel), where quiet reverence is observed at all times.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །ཆོས་སྐྱོང་དབང་པོའི་འཆམ་ཞལ་བྱིན་རླབས་གཏེར་མཛོད།",
+      "englishNotes": "Monastic consent granted for cultural education. Visitors are reminded that viewing the sacred dance requires respectful silence."
+    },
+    "provenanceChain": [
+      "1915: Carved by master woodcarver Tenzin Namdak of Ralang",
+      "1995: Re-consecrated upon opening of New Palchen Choeling monastery",
+      "2024: Preservation record created for monastic archive database"
+    ]
+  },
+  {
+    "id": "art-3",
+    "title": "Zangdokpalri Seven-Tiered Celestial Palace Model",
+    "titleNative": "ཟངས་མདོག་དཔལ་རིའི་བློས་བསླངས་དཀྱིལ་འཁོར།",
+    "type": "artifact",
+    "monastery": "Pemayangtse Monastery",
+    "era": "Completed 1971",
+    "language": "Hand-carved Painted Wood & Brass",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-04-20",
+    "lastReviewDate": "2024-08-01",
+    "curator": "Curator Sonam Topgay",
+    "archivalRef": "SKM-PEM-ZDG-1971-001",
+    "dimensions": "Height: 2.6 meters; Base: 2.2 m × 2.2 m; Over 500 hand-carved figurines",
+    "summary": "The renowned three-dimensional celestial paradise of Guru Rinpoche, hand-carved single-handedly by the late Dungzin Rinpoche over a span of five dedicated years.",
+    "fullContent": "Positioned on the top floor of Pemayangtse Monastery, this extraordinary structure is regarded as one of the apex achievements of Himalayan Buddhist woodworking and cosmological art.\n\nThe seven vertical tiers represent the complete spectrum of enlightened manifestation:\n- Tier 1 (Base): The ocean of bliss with nagas, lotus blooms, and jewel-bearing celestial attendants.\n- Tier 2: The courtyard of human and monastic disciples receiving teachings.\n- Tier 3: The Nirmanakaya realm with Guru Padmasambhava surrounded by his eight manifestations and dakinis.\n- Tier 4: The Sambhogakaya palace of Avalokiteshvara with thousand arms of compassionate action.\n- Tier 5: The Dharmakaya pinnacle of Buddha Amitabha in luminous meditation.\n- Tiers 6 & 7: The rainbow vaults of cosmic wisdom with celestial banners, clouds, and deities playing victory drums.\n\nEvery figurine, roof tile, pillar, and rainbow bridge was carved without mechanical aids, following precise visionary dimensions recorded in Lhatsun Chenpo's meditation revelations.",
+    "translations": {
+      "tibetanExcerpt": "༄༅། །ཟངས་མདོག་དཔལ་རིའི་ཞིང་བཀོད་བློས་བསླངས་ཁྱད་འཕགས།",
+      "englishNotes": "Special photography permission protocol applies on-site. Approved digital model documentation displayed for educational reverence."
+    },
+    "provenanceChain": [
+      "1966–1971: Carved in solitary retreat by Dungzin Rinpoche",
+      "1971: Consecrated by royal and ecclesiastical lamas of Sikkim",
+      "2024: Digital conservation documentation recorded for UNESCO ethical baseline"
+    ]
+  },
+  {
+    "id": "man-4",
+    "title": "Malla King Bir Hambir Terracotta Dedication Inscription (1655 CE)",
+    "titleNative": "বিষ্ণুপুর মল্লরাজ শ্রী রঘুনাথ সিংহ বিরচিত জোড়বাংলা দেবপ্রতিষ্ঠা ফলক",
+    "type": "manuscript",
+    "monastery": "Bishnupur Terracotta Temples",
+    "era": "1655 CE (Shaka Era 1577)",
+    "language": "Classical Bengali & Sanskrit in Gaudiya Script",
+    "source": "researcher-reviewed",
+    "sensitivity": "Public",
+    "approvedDate": "2024-05-12",
+    "lastReviewDate": "2024-08-01",
+    "curator": "ASI Kolkata Circle & Bankura Heritage Society",
+    "archivalRef": "ASI-WB-BNK-1655-001",
+    "dimensions": "Terracotta Dedicatory Plaque (38 cm × 28 cm)",
+    "summary": "Original foundation tablet from Jor Bangla Temple recording the dedication of the shrine to Sri Sri Radha-Krishna by King Raghunath Singha, son of King Bir Hambir.",
+    "fullContent": "The dedicatory terracotta plaque mounted above the central portal of Jor Bangla Temple records the exact astrological conjunction of the temple consecration in the Shaka year 1577 (1655 CE).\n\nThe inscription honors King Raghunath Singha of the Malla dynasty, detailing the architectural innovation of combining two thatched-hut style brick structures (Do-Chala) under a single vaulted tower. It records the specific guild of potters and master terracotta artisans who extracted fine silt from the Damodar and Rupnarayan riverbanks, purified the clay with herbal binders, and hand-molded hundreds of narrative panels illustrating the victory of Rama, Krishna's Rasleela, and the naval mercantile power of Bengal.",
+    "translations": {
+      "tibetanExcerpt": "বাঙ্গালা অক্ষরে শ্লোক খোদিত: শ্রী রঘুনাথ সিংহ ভূপতি বিরচিত দেবনিবাস।",
+      "englishNotes": "Epigraphic reading verified by Archaeological Survey of India (Kolkata Circle). Preserved in situ."
+    },
+    "provenanceChain": [
+      "1655: Fired and consecrated above Jor Bangla portal",
+      "1902: Documented by Alexander Cunningham and ASI surveyors",
+      "2024: Digital 3D photogrammetric record archived in SYNTAXUS"
+    ]
+  },
+  {
+    "id": "man-5",
+    "title": "Delhi Iron Pillar Sanskrit Epigraph of King Chandra (4th Century CE)",
+    "titleNative": "क़ुतुब लौह स्तम्भ चन्द्रगुप्त द्वितीय प्रशस्ति",
+    "type": "manuscript",
+    "monastery": "Qutub Complex & Mehrauli",
+    "era": "Circa 375–413 CE (Gupta Empire)",
+    "language": "Classical Sanskrit in Early Brahmi / Gupta Script",
+    "source": "researcher-reviewed",
+    "sensitivity": "Public",
+    "approvedDate": "2024-03-20",
+    "lastReviewDate": "2024-08-01",
+    "curator": "ASI Delhi Circle & IIT Kanpur Research Group",
+    "archivalRef": "ASI-DL-QTB-0400-001",
+    "dimensions": "Six-line verse engraved on forged wrought iron, 23.8 feet total pillar height",
+    "summary": "Monumental Sanskrit eulogy of King Chandra (Chandragupta II Vikramaditya) recording his conquests across the seven mouths of the Indus and the consecration of the pillar as a Vishnu-dhvaja.",
+    "fullContent": "Engraved in sharp, deep classical Gupta Brahmi characters upon the rustless wrought-iron surface, the inscription consists of three Sanskrit verses in the Shardulavikridita meter:\n\n1. 'He, on whose arm fame was inscribed by the sword, when, in battle in the Vanga countries, he kneaded into submission the enemies who had united against him...'\n2. 'He, by whom having crossed in warfare the seven mouths of the river Sindhu, the Vahlikas were conquered...'\n3. 'By him, the sovereign king named Chandra, having with devotion fixed his mind upon Lord Vishnu, this lofty flagstaff of the divine Vishnu was set up on the sacred hill of Vishnupada.'\n\nThe metallurgical marvel of this 6-tonne pillar lies in the presence of a high phosphorus protective layer (misawite), which prevented oxidation despite sixteen centuries of exposure to North Indian monsoons.",
+    "translations": {
+      "tibetanExcerpt": "यस्योद्वर्त्तयतः प्रतीपमुरसा शत्रून् समेत्यागतान् वङ्गेष्वाहववर्त्तिनोऽभिलिखिता खड्गेन कीर्त्तिर्भुजे।",
+      "englishNotes": "Translated and edited by J.F. Fleet (Corpus Inscriptionum Indicarum). Verified against ASI epigraphical records."
+    },
+    "provenanceChain": [
+      "c. 400 CE: Erected at Vishnupadagiri (Udayagiri/Mathura)",
+      "c. 1050 CE: Relocated to Dhillika by King Anangpal Tomar",
+      "1192 CE: Integrated into Qutub Complex courtyard",
+      "2024: Digital archival preservation recorded for SYNTAXUS"
+    ]
+  },
+  {
+    "id": "man-6",
+    "title": "Brihadisvara Granite Temple Inscription of Rajaraja Chola I (1010 CE)",
+    "titleNative": "தஞ்சைப் பெருவுடையார் கோயில் இராஜராஜ சோழன் கல்வெட்டு",
+    "type": "manuscript",
+    "monastery": "Brihadisvara Temple, Thanjavur",
+    "era": "1010 CE (25th Regnal Year of Rajaraja I)",
+    "language": "Old Tamil in Chola Grantha & Tamil Script",
+    "source": "monastery-approved",
+    "sensitivity": "Public",
+    "approvedDate": "2024-04-15",
+    "lastReviewDate": "2024-08-01",
+    "curator": "ASI Chennai Circle & Thanjavur Devasthanam",
+    "archivalRef": "ASI-TN-TNJ-1010-001",
+    "dimensions": "Continuous stone engraving spanning 100 meters along temple plinth",
+    "summary": "Royal decree recording the names, village origins, and daily grain allowances of all 400 temple dancers (Talicheri Pendugal), musicians, architects, and administrators.",
+    "fullContent": "Inscribed deeply into the polished granite base of the vimana, this is one of the world's most exhaustive municipal and cultural records from the medieval era.\n\nEmperor Rajaraja Chola I mandated: 'Let no person who served this temple be forgotten.' The inscription records the names of Chief Architect Kunjaramallan Rajaraja Perunthachan, 400 dancers invited from across the Chola empire, 212 percussionists and flute masters, the exact weights of gold crowns presented to Lord Shiva, and the agricultural revenues of 100+ villages endowed in perpetuity for temple maintenance and pilgrim feeding halls.",
+    "translations": {
+      "tibetanExcerpt": "நாம் குடுத்தனவும் நம் அக்கன் குடுத்தனவும் நம் பெண்டுகள் குடுத்தனவும் மற்றும் குடுத்தார் குடுத்தனவும்...",
+      "englishNotes": "Published by E. Hultzsch in South Indian Inscriptions Vol II. Verified on-site."
+    },
+    "provenanceChain": [
+      "1010 CE: Inscribed directly into temple granite plinth",
+      "1890: Documented by the Government Epigraphist for India",
+      "2024: Audio synthesis and educational transcription created for SYNTAXUS"
+    ]
+  },
+  {
+    "id": "art-4",
+    "title": "Dholavira Ancient Indus Water Management Tablet & Signboard",
+    "titleNative": "धोलावीरा हड़प्पा नगर जल प्रबंधन एवं संकेत पट्टिका",
+    "type": "artifact",
+    "monastery": "Dholavira: Harappan City",
+    "era": "Circa 2400 BCE (Mature Harappan)",
+    "language": "Indus Script / Ancient Harappan Glyphs & Gypsum Inlay",
+    "source": "researcher-reviewed",
+    "sensitivity": "Public",
+    "approvedDate": "2024-03-25",
+    "lastReviewDate": "2024-08-01",
+    "curator": "ASI Excavation Branch & Vadodara Circle",
+    "archivalRef": "ASI-GJ-DHL-2400-001",
+    "dimensions": "10 Large Gypsum Symbols (approx. 37 cm height each), inlaid in wooden board",
+    "summary": "The world's oldest surviving civic signboard discovered near the northern gateway of Dholavira citadel, paired with archaeological records of the 16 rock-cut rainwater reservoirs.",
+    "fullContent": "Discovered during excavations led by Dr. R.S. Bisht, the Dholavira Signboard consists of 10 large glyphs fashioned from crystalline gypsum, originally inlaid into a 3-meter wide wooden board that hung above the monumental northern gateway of the citadel.\n\nArchaeological analysis confirms Dholavira's advanced civil engineering: the entire city was ringed by a cascade of 16 massive rock-cut reservoirs capable of storing over 250,000 cubic meters of rainwater captured from the seasonal Manhar and Mansar torrents. Stone filter chambers, check-dams, and underground silt traps ensured clean potable water for a population of 20,000 residents in an arid salt desert environment.",
+    "translations": {
+      "tibetanExcerpt": "सिंधु लिपि के 10 प्रतीक चिन्ह जो उत्तरी दुर्ग द्वार पर प्रदर्शित थे।",
+      "englishNotes": "Excavation and cataloguing by Archaeological Survey of India. Displayed at National Museum and Dholavira Site Museum."
+    },
+    "provenanceChain": [
+      "c. 2400 BCE: Mounted above Dholavira North Gate",
+      "1990: Excavated by Archaeological Survey of India team",
+      "2024: Digital conservation documentation recorded for SYNTAXUS"
+    ]
+  }
+]

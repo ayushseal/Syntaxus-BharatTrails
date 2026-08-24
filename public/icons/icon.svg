@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332" />
+      <stop offset="50%" stop-color="#2d8a54" />
+      <stop offset="100%" stop-color="#112d20" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8dbac" />
+      <stop offset="50%" stop-color="#C17817" />
+      <stop offset="100%" stop-color="#924c10" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#gold)" stroke-width="8" stroke-dasharray="12 8" opacity="0.6"/>
+  <!-- Pagoda / Monastery Crest Silhouette -->
+  <path d="M 256 110 L 290 165 L 360 175 L 305 215 L 320 285 L 256 250 L 192 285 L 207 215 L 152 175 L 222 165 Z" fill="url(#gold)" opacity="0.9" />
+  <!-- Sacred Archway -->
+  <path d="M 176 390 L 176 270 Q 256 200 336 270 L 336 390 Z" fill="none" stroke="#FDFBF7" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 216 390 L 216 320 Q 256 280 296 320 L 296 390 Z" fill="url(#gold)"/>
+  <!-- Central Dharma Jewel -->
+  <circle cx="256" cy="256" r="22" fill="#FDFBF7"/>
+  <circle cx="256" cy="256" r="14" fill="#6B1D2A"/>
+  <!-- Text Emblem -->
+  <text x="256" y="440" text-anchor="middle" fill="#FDFBF7" font-family="serif" font-size="34" font-weight="bold" letter-spacing="4">SYNTAXUS</text>
+</svg>
