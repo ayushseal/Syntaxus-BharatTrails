@@ -37,8 +37,8 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col">
             {children}
           </div>
-          <Analytics />
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
