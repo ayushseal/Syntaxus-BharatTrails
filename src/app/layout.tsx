@@ -3,6 +3,7 @@ import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import ServiceWorkerRegister from "@/components/shared/ServiceWorkerRegister";
 import GoogleTranslateScript from "@/components/shared/GoogleTranslateScript";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "SYNTAXUS — Bharat Heritage & Tourism Atlas | Complete Heritage & Hidden Gems",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col">
             {children}
           </div>
+          <Analytics />
         </I18nProvider>
       </body>
     </html>
