@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -10,44 +10,19 @@ import {
   MapPin,
   Mountain,
   Calendar,
-  Camera,
-  CameraOff,
   Eye,
-  Download,
   BookOpen,
   Shield,
-  ChevronRight,
-  Users,
-  Home as HomeIcon,
-  AlertCircle,
   Volume2,
-  Footprints,
-  RotateCw,
   VolumeX,
-  Hand,
-  Shirt,
-  Lock,
-  Layers,
-  Landmark,
-  DoorClosed,
-  Trees,
-  Maximize2,
-  Phone,
   PhoneCall,
-  Mail,
-  Copy,
-  Check,
   ExternalLink,
   Building,
-  Send,
-  Sparkles,
   Compass,
-  Navigation,
+  Users,
 } from "lucide-react";
 import Header from "@/components/layout/Header";
 import {
-  ConsentBadge,
-  PermissionLabel,
   SacredAccessBanner,
 } from "@/components/shared/ConsentMetadata";
 import ArchiveReaderModal, { ArchiveRecord } from "@/components/shared/ArchiveReaderModal";
@@ -64,12 +39,11 @@ export default function HeritageSiteProfilePage({
 }: {
   params: { slug: string };
 }) {
-  const { language, t } = useI18n();
+  const { language } = useI18n();
   const { slug } = params;
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Tab>("story");
   const [selectedArchive, setSelectedArchive] = useState<ArchiveRecord | null>(null);
-  const [copiedAddress, setCopiedAddress] = useState(false);
   const [playingStoryId, setPlayingStoryId] = useState<string | null>(null);
 
   // Synchronously initialize site data so there is 0ms waiting screen
@@ -150,14 +124,6 @@ export default function HeritageSiteProfilePage({
       router.push(returnUrl);
     } else {
       router.push("/explore");
-    }
-  };
-
-  const handleCopyAddress = (addressText: string) => {
-    if (typeof navigator !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText(addressText);
-      setCopiedAddress(true);
-      setTimeout(() => setCopiedAddress(false), 2500);
     }
   };
 
@@ -533,28 +499,170 @@ export default function HeritageSiteProfilePage({
                 </div>
               </div>
 
-              {/* Nearby Services */}
-              {site.nearbyServices && site.nearbyServices.length > 0 && (
-                <div className="bg-white p-6 rounded-2xl border border-parchment-300 shadow-xs">
-                  <h3 className="font-heading font-bold text-forest-800 text-base mb-4 flex items-center gap-2">
+              {/* Accommodations & MakeMyTrip Live Directory */}
+              <div className="bg-white p-6 rounded-2xl border border-parchment-300 shadow-xs space-y-6">
+                <div>
+                  <h3 className="font-heading font-bold text-forest-800 text-base mb-1 flex items-center gap-2">
                     <Building size={18} className="text-forest-600" />
-                    Approved Accommodations, Certified Guides & Transport
+                    Accommodations & Stays around {site.name.en}
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                    {site.nearbyServices.map((srv, idx) => (
-                      <div key={idx} className="p-3.5 rounded-xl bg-parchment-50 border border-parchment-200">
-                        <span className="text-[10px] font-bold text-saffron-700 uppercase tracking-wider block">
-                          {srv.type} · {srv.distance}
+                  <p className="text-xs text-stone-500">
+                    Find verified hotels, heritage resorts, government guesthouses, and eco-homestays in {site.district || site.state || site.name.en}.
+                  </p>
+                </div>
+
+                {/* MakeMyTrip Live Aggregator Card */}
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-amber-50/60 via-parchment-50 to-red-50/40 border border-parchment-300 shadow-xs relative overflow-hidden">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div className="space-y-1.5 max-w-xl">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="px-2.5 py-0.5 rounded-full bg-forest-800 text-saffron-300 text-[10px] font-extrabold tracking-wider uppercase shadow-xs">
+                          ✨ Yatra Niwas
                         </span>
-                        <h4 className="font-bold text-forest-900 text-xs mt-0.5">{srv.name}</h4>
-                        <span className="badge-approved text-[10px] mt-2 inline-flex">
-                          ✓ Tourism Department Approved
+                        <span className="text-[11px] font-semibold text-forest-900">
+                          Instant Availability & Best Price Guarantee
                         </span>
                       </div>
-                    ))}
+                      <h4 className="font-heading font-bold text-stone-900 text-sm md:text-base">
+                        Explore Verified Hotels, Heritage Resorts & Homestays near {site.name.en}
+                      </h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        Compare live pricing, verified guest reviews, AC rooms, pure-veg dining options, and distance from the sacred site across top travel networks.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+                      <a
+                        href={`https://www.makemytrip.com/hotels/hotel-listing/?searchText=${encodeURIComponent(
+                          `${site.name.en} ${site.district ? site.district + " " : ""}${site.state || "India"}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-700 hover:to-rose-800 text-white text-xs font-bold shadow-md hover:shadow-lg transition-all min-h-[42px]"
+                      >
+                        <span>View Hotels on MakeMyTrip</span>
+                        <ExternalLink size={14} />
+                      </a>
+                      <a
+                        href={`https://www.google.com/travel/hotels/${encodeURIComponent(
+                          `${site.name.en} ${site.district ? site.district + " " : ""}${site.state || "India"}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-stone-300 text-stone-700 hover:bg-stone-50 hover:text-stone-900 text-xs font-semibold shadow-xs transition-all min-h-[42px]"
+                      >
+                        <span>Google Hotels</span>
+                        <ExternalLink size={14} />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              )}
+
+                {/* Community Livelihood & Artisan Empowerment (Social Impact Hub) */}
+                <div className="pt-4 border-t border-parchment-200">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                    <div>
+                      <h4 className="font-heading font-bold text-forest-900 text-sm md:text-base flex items-center gap-2">
+                        <Users size={18} className="text-forest-700" />
+                        Community Livelihood & Local Artisan Cooperatives
+                      </h4>
+                      <p className="text-xs text-stone-500 mt-0.5">
+                        Direct fair-trade cooperatives, certified local storytellers, and women-led rural enterprises.
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-bold shrink-0">
+                      🌱 100% Direct Fair-Trade Proceeds
+                    </span>
+                  </div>
+
+                  {/* Impact Stats Banner */}
+                  <div className="p-3.5 rounded-xl bg-gradient-to-r from-forest-50 via-emerald-50/60 to-amber-50/50 border border-forest-200/70 mb-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs text-forest-950">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-7 h-7 rounded-lg bg-forest-700 text-white flex items-center justify-center font-bold text-xs shrink-0">
+                        🤝
+                      </span>
+                      <span>
+                        <strong>National Heritage Social Impact:</strong> Every guided tour hire, local craft purchase, and community homestay booking directly supports local rural families and native heritage custodians without commercial middleman fees.
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Dynamic Local Impact Enterprise Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5">
+                    {/* Card 1: Local Artisan / Craft Guild */}
+                    <div className="p-4 rounded-xl bg-parchment-50 border border-parchment-200 flex flex-col justify-between hover:shadow-xs transition-shadow">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                          <span className="text-[10px] font-bold text-saffron-700 uppercase tracking-wider">
+                            Indigenous Crafts & Handloom
+                          </span>
+                          <span className="text-[10px] text-stone-400 font-semibold">200 m</span>
+                        </div>
+                        <h5 className="font-bold text-forest-900 text-xs md:text-sm">
+                          {site.district || site.state} Heritage Artisan & Weavers Co-op
+                        </h5>
+                        <p className="text-[11px] text-stone-600 mt-1 leading-snug">
+                          Authentic One-District-One-Product (ODOP) traditional crafts, organic textiles, and handmade terracotta & metal artifacts.
+                        </p>
+                      </div>
+                      <div className="mt-3 pt-2.5 border-t border-parchment-200 flex items-center justify-between">
+                        <span className="badge-approved text-[10px] inline-flex">
+                          ✓ Women SHG Collective
+                        </span>
+                        <span className="text-[10px] font-bold text-forest-700">Fair Trade</span>
+                      </div>
+                    </div>
+
+                    {/* Card 2: Certified Community Guide / Storyteller */}
+                    <div className="p-4 rounded-xl bg-parchment-50 border border-parchment-200 flex flex-col justify-between hover:shadow-xs transition-shadow">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                          <span className="text-[10px] font-bold text-saffron-700 uppercase tracking-wider">
+                            Certified Heritage Interpreter
+                          </span>
+                          <span className="text-[10px] text-stone-400 font-semibold">On-site Gate</span>
+                        </div>
+                        <h5 className="font-bold text-forest-900 text-xs md:text-sm">
+                          {site.name.en} Monastic & Local Guides Union
+                        </h5>
+                        <p className="text-[11px] text-stone-600 mt-1 leading-snug">
+                          Ministry of Culture & ASI certified local storytellers offering oral history tours in English, Hindi, and regional dialects.
+                        </p>
+                      </div>
+                      <div className="mt-3 pt-2.5 border-t border-parchment-200 flex items-center justify-between">
+                        <span className="badge-approved text-[10px] inline-flex">
+                          ✓ Govt. Certified
+                        </span>
+                        <span className="text-[10px] font-bold text-forest-700">Fixed Rates</span>
+                      </div>
+                    </div>
+
+                    {/* Card 3: Eco Transport / Green Mobility */}
+                    <div className="p-4 rounded-xl bg-parchment-50 border border-parchment-200 flex flex-col justify-between hover:shadow-xs transition-shadow">
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                          <span className="text-[10px] font-bold text-saffron-700 uppercase tracking-wider">
+                            Zero-Carbon Transit
+                          </span>
+                          <span className="text-[10px] text-stone-400 font-semibold">100 m</span>
+                        </div>
+                        <h5 className="font-bold text-forest-900 text-xs md:text-sm">
+                          Eco Solar E-Shuttle & Village Cab Union
+                        </h5>
+                        <p className="text-[11px] text-stone-600 mt-1 leading-snug">
+                          Locally operated clean electric shuttles and verified village taxi drivers connecting heritage spots and railway hubs.
+                        </p>
+                      </div>
+                      <div className="mt-3 pt-2.5 border-t border-parchment-200 flex items-center justify-between">
+                        <span className="badge-approved text-[10px] inline-flex">
+                          ✓ Tourism Authorized
+                        </span>
+                        <span className="text-[10px] font-bold text-forest-700">Clean Mobility</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
 
