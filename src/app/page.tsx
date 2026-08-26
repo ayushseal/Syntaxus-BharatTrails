@@ -6,7 +6,6 @@ import Link from "next/link";
 import {
   Search,
   MapPin,
-  Eye,
   BookOpen,
   Download,
   ArrowRight,
@@ -100,10 +99,6 @@ export default function HomePage() {
           {/* Hero Content */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-12 max-w-7xl mx-auto">
             <div className="animate-fade-in-up">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-saffron-500/90 text-white text-xs font-semibold mb-4 shadow-md backdrop-blur-sm">
-                <Eye size={13} />
-                {t("home.heroBadge")}
-              </span>
               <h2 className="text-3xl md:text-5xl font-heading font-bold text-white leading-tight mb-2 drop-shadow-md">
                 {heroName}
               </h2>
@@ -118,15 +113,6 @@ export default function HomePage() {
                   {t("home.exploreMonastery")}
                   <ArrowRight size={16} />
                 </Link>
-                {currentHero?.virtualTourEnabled && (
-                  <Link
-                    href={`/monastery/${currentHero?.id}/virtual`}
-                    className="btn-saffron shadow-lg"
-                  >
-                    <Eye size={16} />
-                    {t("home.launchVirtual")}
-                  </Link>
-                )}
               </div>
             </div>
 
