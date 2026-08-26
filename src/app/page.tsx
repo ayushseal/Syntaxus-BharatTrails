@@ -6,6 +6,7 @@ import Link from "next/link";
 import {
   Search,
   MapPin,
+  Eye,
   BookOpen,
   Download,
   ArrowRight,
