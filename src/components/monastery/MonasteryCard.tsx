@@ -6,11 +6,9 @@ import {
   MapPin,
   Mountain,
   Download,
-  Eye,
   Camera,
   CameraOff,
 } from "lucide-react";
-import { ConsentBadge } from "@/components/shared/ConsentMetadata";
 import { useI18n } from "@/lib/i18n";
 
 interface MonasteryCardProps {
@@ -87,15 +85,6 @@ export default function MonasteryCard({
             </span>
           </div>
 
-          {/* Virtual tour badge */}
-          {virtualTourAvailable && (
-            <div className="absolute top-3 right-3">
-              <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-saffron-500/90 text-white flex items-center gap-1 shadow-sm">
-                <Eye size={10} />
-                360°
-              </span>
-            </div>
-          )}
 
           {/* Title overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -123,8 +112,7 @@ export default function MonasteryCard({
               <Mountain size={12} className="text-forest-600" />
               {altitude}
             </span>
-            <span className="text-parchment-300">•</span>
-            <ConsentBadge type="monastery-approved" size="sm" />
+
           </div>
 
           <div className="flex items-center justify-between border-t border-parchment-200/80 pt-3">
