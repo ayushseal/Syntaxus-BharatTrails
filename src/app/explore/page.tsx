@@ -233,6 +233,42 @@ export default function ExplorePage() {
     };
   };
 
+  const getWeatherIcon = (code: number): string => {
+    if (code === 0) return "☀️";
+    if (code <= 3) return "⛅";
+    if (code <= 48) return "🌫️";
+    if (code <= 57) return "🌦️";
+    if (code <= 67) return "🌧️";
+    if (code <= 77) return "🌨️";
+    if (code <= 82) return "🌧️";
+    if (code <= 86) return "❄️";
+    if (code <= 99) return "⛈️";
+    return "🌤️";
+  };
+
+  const getWeatherLabel = (code: number): string => {
+    if (code === 0) return "Clear Sky";
+    if (code <= 3) return "Partly Cloudy";
+    if (code <= 48) return "Foggy";
+    if (code <= 57) return "Drizzle";
+    if (code <= 67) return "Rainy";
+    if (code <= 77) return "Snowfall";
+    if (code <= 82) return "Heavy Rain";
+    if (code <= 86) return "Heavy Snow";
+    if (code <= 99) return "Thunderstorm";
+    return "Cloudy";
+  };
+
+  const getWeatherAlert = (code: number, temp: number, wind: number): string | null => {
+    if (code >= 95) return "⚠️ Thunderstorm Alert — Avoid open areas";
+    if (code >= 80) return "⚠️ Heavy Rain — Carry rain gear";
+    if (code >= 71) return "⚠️ Snowfall — Roads may be slippery";
+    if (temp >= 42) return "⚠️ Extreme Heat — Stay hydrated";
+    if (temp <= 0) return "⚠️ Freezing — Dress warmly";
+    if (wind >= 50) return "⚠️ Strong Winds — Exercise caution";
+    return null;
+  };
+
   const createPopupContent = (monastery: any) => {
     const nameStr = typeof monastery.name === "string" ? monastery.name : monastery.name?.en || monastery.id;
     const stateStr = monastery.state || "India";
@@ -242,6 +278,8 @@ export default function ExplorePage() {
     const phoneStr = monastery.contact?.phone || "";
     const heroImg = monastery.heroImage || `/images/monasteries/${monastery.id}.png`;
     const has360 = Boolean(monastery.virtualTourEnabled ?? monastery.virtualTour?.available ?? true);
+    const lat = monastery.location?.lat ?? monastery.latitude;
+    const lng = monastery.location?.lng ?? monastery.longitude;
 
     const div = document.createElement("div");
     div.className = "heritage-border bg-[#FDFBF7]/98 backdrop-blur-md p-3.5 shadow-2xl rounded-2xl border-2 border-amber-500 w-[310px] sm:w-[340px] text-stone-800 animate-fade-in";
@@ -276,7 +314,13 @@ export default function ExplorePage() {
           ` : ""}
         </div>
       </div>
-      <div class="mt-3 flex gap-2">
+      <div id="weather-row-${monastery.id}" class="mt-2 px-1">
+        <div class="flex items-center gap-1.5 text-[11px] text-stone-400">
+          <span class="inline-block w-3 h-3 rounded-full bg-stone-200 animate-pulse"></span>
+          Loading weather...
+        </div>
+      </div>
+      <div class="mt-2.5 flex gap-2">
         <a href="/heritage/${monastery.id}" class="flex-1 bg-[#1B4332] hover:bg-[#2D8A54] text-white text-xs font-bold py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1 shadow-sm transition-all" style="text-decoration: none;">
           <span>View Profile</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
@@ -289,6 +333,49 @@ export default function ExplorePage() {
         ` : ""}
       </div>
     `;
+
+    // Fetch live weather from Open-Meteo (free, no API key)
+    if (typeof lat === "number" && typeof lng === "number") {
+      fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lng}&current_weather=true`)
+        .then((res) => res.json())
+        .then((data) => {
+          const weatherRow = div.querySelector(`#weather-row-${monastery.id}`);
+          if (!weatherRow || !data.current_weather) return;
+
+          const temp = Math.round(data.current_weather.temperature);
+          const code = data.current_weather.weathercode;
+          const wind = Math.round(data.current_weather.windspeed);
+          const icon = getWeatherIcon(code);
+          const label = getWeatherLabel(code);
+          const alert = getWeatherAlert(code, temp, wind);
+
+          weatherRow.innerHTML = `
+            <div class="flex items-center justify-between bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200 rounded-lg px-2.5 py-1.5">
+              <div class="flex items-center gap-1.5">
+                <span class="text-base">${icon}</span>
+                <span class="text-[12px] font-bold text-stone-800">${temp}°C</span>
+                <span class="text-[10px] text-stone-500 font-medium">${label}</span>
+              </div>
+              <span class="text-[10px] text-stone-400 font-medium">💨 ${wind} km/h</span>
+            </div>
+            ${alert ? `
+              <div class="mt-1 text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-2 py-1">
+                ${alert}
+              </div>
+            ` : ""}
+          `;
+        })
+        .catch(() => {
+          const weatherRow = div.querySelector(`#weather-row-${monastery.id}`);
+          if (weatherRow) {
+            weatherRow.innerHTML = `
+              <a href="https://www.google.com/search?q=weather+${encodeURIComponent(districtStr || stateStr)}" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-[11px] text-sky-600 font-medium hover:underline" style="text-decoration: none;">
+                🌤️ Check Weather →
+              </a>
+            `;
+          }
+        });
+    }
 
     return div;
   };
