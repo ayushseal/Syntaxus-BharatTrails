@@ -373,8 +373,8 @@ export default function HomePage() {
             <div className="grid grid-cols-3 gap-4">
               {[
                 { number: "100%", label: t("home.stat1") },
-                { number: "6", label: t("home.stat2") },
-                { number: "0", label: t("home.stat3") },
+                { number: "36", label: t("home.stat2") },
+                { number: "300+", label: t("home.stat3") },
               ].map((stat) => (
                 <div key={stat.label} className="text-center p-3 rounded-lg bg-parchment-100/60 border border-parchment-200">
                   <p className="text-2xl md:text-3xl font-heading font-bold text-saffron-600">
