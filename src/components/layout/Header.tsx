@@ -31,20 +31,41 @@ export default function Header() {
   const { language, setLanguage, t } = useI18n();
 
   useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    if (typeof window === "undefined") return;
 
-    if (typeof window !== "undefined") {
-      setIsOnline(navigator.onLine);
-      window.addEventListener("online", handleOnline);
-      window.addEventListener("offline", handleOffline);
-    }
+    // Real connectivity check — navigator.onLine is unreliable on mobile
+    const checkConnectivity = async () => {
+      if (!navigator.onLine) {
+        setIsOnline(false);
+        return;
+      }
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 3000);
+        await fetch("/manifest.json", {
+          method: "HEAD",
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        clearTimeout(timeout);
+        setIsOnline(true);
+      } catch {
+        setIsOnline(false);
+      }
+    };
+
+    checkConnectivity();
+    const interval = setInterval(checkConnectivity, 5000);
+
+    const handleOnline = () => checkConnectivity();
+    const handleOffline = () => setIsOnline(false);
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
 
     return () => {
-      if (typeof window !== "undefined") {
-        window.removeEventListener("online", handleOnline);
-        window.removeEventListener("offline", handleOffline);
-      }
+      clearInterval(interval);
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
     };
   }, []);
 

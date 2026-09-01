@@ -1,4 +1,4 @@
-const CACHE_NAME = "syntaxus-cache-v2";
+const CACHE_NAME = "syntaxus-cache-v3";
 const OFFLINE_URL = "/";
 
 const STATIC_ASSETS = [
@@ -10,7 +10,8 @@ const STATIC_ASSETS = [
   "/offline",
   "/curator",
   "/manifest.json",
-  "/icons/icon.svg"
+  "/icons/icon.svg",
+  "/logo.png"
 ];
 
 self.addEventListener("install", (event) => {
@@ -44,8 +45,31 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(event.request.url);
 
-  // For media images and icons: Cache first, then network
-  if (url.pathname.startsWith("/images/") || url.pathname.startsWith("/icons/")) {
+  // Skip external requests (APIs, Google Translate, etc.)
+  if (url.origin !== self.location.origin) return;
+
+  // For images and icons: Cache first, then network
+  if (url.pathname.startsWith("/images/") || url.pathname.startsWith("/icons/") || url.pathname.endsWith(".png") || url.pathname.endsWith(".jpg") || url.pathname.endsWith(".svg")) {
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(event.request).then((response) => {
+          if (response.status === 200) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return response;
+        }).catch(() => {
+          // Return a transparent 1x1 pixel as fallback for images
+          return new Response("", { status: 404, statusText: "Offline" });
+        });
+      })
+    );
+    return;
+  }
+
+  // For Next.js static chunks (_next/static/): Cache first (immutable)
+  if (url.pathname.startsWith("/_next/static/")) {
     event.respondWith(
       caches.match(event.request).then((cached) => {
         if (cached) return cached;
@@ -61,7 +85,7 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // For CSS, JS chunks, and HTML pages: Network first, fallback to cache
+  // For HTML pages and other assets: Network first, fallback to cache
   event.respondWith(
     fetch(event.request)
       .then((networkResponse) => {
@@ -74,9 +98,12 @@ self.addEventListener("fetch", (event) => {
       .catch(async () => {
         const cached = await caches.match(event.request);
         if (cached) return cached;
+        // For page navigations, serve the cached home page as fallback
         if (event.request.mode === "navigate") {
-          return caches.match(OFFLINE_URL);
+          const fallback = await caches.match(OFFLINE_URL);
+          if (fallback) return fallback;
         }
+        return new Response("Offline", { status: 503, statusText: "Offline" });
       })
   );
 });
