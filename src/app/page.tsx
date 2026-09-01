@@ -31,6 +31,7 @@ export default function HomePage() {
   const [trailsList, setTrailsList] = useState<any[]>(fallbackTrails);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
   const { language, t } = useI18n();
 
   useEffect(() => {
@@ -65,12 +66,29 @@ export default function HomePage() {
     .filter(Boolean) as typeof monasteriesList;
   const currentHeroList = heroMonasteries.length > 0 ? heroMonasteries : monasteriesList.slice(0, 3);
 
+  // Auto-advance hero carousel every 5 seconds
+  useEffect(() => {
+    if (heroPaused || currentHeroList.length <= 1) return;
+    const timer = setInterval(() => {
+      setActiveHeroIndex((prev) => (prev + 1) % currentHeroList.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroPaused, currentHeroList.length]);
+
+  // Resume auto-advance 8 seconds after manual dot click
+  useEffect(() => {
+    if (!heroPaused) return;
+    const resume = setTimeout(() => setHeroPaused(false), 8000);
+    return () => clearTimeout(resume);
+  }, [heroPaused]);
+
   const filteredMonasteries = searchQuery
     ? searchHeritageMonuments(searchQuery, monasteriesList)
     : monasteriesList;
 
   const currentHero = currentHeroList[activeHeroIndex] || currentHeroList[0] || monasteriesList[0];
   const heroName = typeof currentHero?.name === "string" ? currentHero.name : (language === "hi" && currentHero?.name?.hi ? currentHero.name.hi : currentHero?.name?.en || currentHero?.id || "Monastery");
+
 
   return (
     <div className="min-h-screen flex flex-col bg-parchment-50">
@@ -89,7 +107,9 @@ export default function HomePage() {
                 src={monastery.heroImage || `/images/monasteries/${monastery.id}.png`}
                 alt={typeof monastery.name === "string" ? monastery.name : monastery.name?.en || monastery.id}
                 fill
-                className="object-cover scale-105"
+                className={`object-cover transition-transform duration-[5000ms] ease-linear ${
+                  index === activeHeroIndex ? "scale-110" : "scale-100"
+                }`}
                 priority={index === 0}
                 sizes="100vw"
               />
@@ -122,7 +142,10 @@ export default function HomePage() {
               {currentHeroList.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveHeroIndex(index)}
+                  onClick={() => {
+                    setActiveHeroIndex(index);
+                    setHeroPaused(true);
+                  }}
                   className={`h-1.5 rounded-full transition-all duration-300 min-h-0 min-w-0 ${
                     index === activeHeroIndex
                       ? "w-8 bg-saffron-400"
