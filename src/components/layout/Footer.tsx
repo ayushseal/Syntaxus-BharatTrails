@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { HeritageEmblem } from "@/components/ui/BrandLogo";
 import { useI18n } from "@/lib/i18n";
-import { Compass, MapPin, Route, BookOpen, Download, Shield, Sparkles } from "lucide-react";
+import { MapPin, Route, BookOpen, Download, Shield, Sparkles } from "lucide-react";
 
 export default function Footer() {
-  const { language, t } = useI18n();
+  const { language } = useI18n();
 
   return (
     <footer className="bg-forest-950 text-parchment-100 border-t border-forest-800/60 pt-12 pb-20 md:pb-12 mt-16">
@@ -19,7 +19,7 @@ export default function Footer() {
               <HeritageEmblem size="lg" />
               <div>
                 <h3 className="font-heading font-extrabold text-white text-base md:text-lg tracking-wide uppercase leading-tight">
-                  {language === "hi" ? "भारत धरोहर एवं पर्यटन एटलस" : "BHARAT HERITAGE & TOURISM ATLAS"}
+                  {language === "hi" ? "भारत ट्रेल्स" : "BHARAT TRAILS"}
                 </h3>
                 <p className="text-xs font-bold text-saffron-400 tracking-[0.2em] uppercase mt-0.5">
                   SYNTAXUS · AICTE PS ID 26202
@@ -86,7 +86,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-parchment-400/80">
-          <p>© {new Date().getFullYear()} BHARAT HERITAGE & TOURISM ATLAS. Built with pride by Team SYNTAXUS.</p>
+          <p>© {new Date().getFullYear()} BHARAT TRAILS. Built with pride by Team SYNTAXUS.</p>
           <p className="font-mono text-[10px]">v2.4.0 · 58 Verified Heritage Sites</p>
         </div>
       </div>

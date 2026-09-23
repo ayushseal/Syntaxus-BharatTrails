@@ -85,7 +85,6 @@ export default function MonasteryCard({
             </span>
           </div>
 
-
           {/* Title overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-4">
             <h3 className="text-white font-heading text-xl font-bold leading-tight drop-shadow-md">

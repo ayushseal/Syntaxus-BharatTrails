@@ -1,7 +1,7 @@
 {
   "common": {
     "appName": "SYNTAXUS",
-    "tagline": "Bharat Heritage & Tourism Atlas",
+    "tagline": "Bharat Trails",
     "subTagline": "Discover India's sacred heritage & hidden gems. Every visit empowers local communities.",
     "online": "Online",
     "offline": "Offline Mode",
@@ -22,10 +22,16 @@
     "home": "Discover",
     "explore": "Explore Map",
     "plan": "Circuits",
+    "geoshield": "GeoShield",
     "archives": "Archives",
     "offline": "Offline Packs",
     "saved": "Offline Packs",
     "passport": "Respect Passport"
+  },
+  "geoshield": {
+    "title": "GeoShield Disaster Intelligence",
+    "subtitle": "Disaster-awareness, risk-visualisation and pilgrimage route safety",
+    "parth": "PARTH Emergency Copilot"
   },
   "home": {
     "heroBadge": "Verified Pan-India Heritage & Tourism",

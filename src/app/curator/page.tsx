@@ -640,19 +640,19 @@ export default function CuratorPortalPage() {
     <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
-        <div className="section-padding max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-5 md:pt-7 pb-20">
           {/* Header Bar with Role */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3.5">
             <div>
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-8 h-8 rounded-xl bg-maroon-800 text-white flex items-center justify-center shadow-xs">
-                  <Shield size={18} />
+              <div className="flex items-center gap-2 mb-0.5">
+                <div className="w-7 h-7 rounded-lg bg-maroon-800 text-white flex items-center justify-center shadow-xs">
+                  <Shield size={15} />
                 </div>
-                <h1 className="text-2xl font-heading font-bold text-forest-800">
+                <h1 className="text-xl md:text-2xl font-heading font-bold text-forest-800">
                   Curator & Governance Dashboard
                 </h1>
               </div>
-              <p className="text-xs md:text-sm text-stone-500">
+              <p className="text-xs text-stone-500">
                 Logged in as: <strong>{curatorUser?.fullName || "Senior Curator"}</strong> ({curatorUser?.agency || "ASI"}) · Role: <span className="font-mono font-bold text-saffron-700">{curatorUser?.role || "CURATOR"}</span>
               </p>
             </div>
@@ -662,7 +662,7 @@ export default function CuratorPortalPage() {
               <select
                 value={selectedSiteId}
                 onChange={(e) => setSelectedSiteId(e.target.value)}
-                className="px-3 py-2 rounded-xl border border-parchment-300 bg-white text-xs font-semibold text-stone-700 focus:outline-none min-h-[38px] shadow-xs"
+                className="px-3 py-1.5 rounded-lg border border-parchment-300 bg-white text-xs font-semibold text-stone-700 focus:outline-none min-h-[34px] shadow-xs"
               >
                 {sites.map((s) => (
                   <option key={s.id} value={s.id}>
@@ -673,17 +673,17 @@ export default function CuratorPortalPage() {
 
               <button
                 onClick={handleLogout}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-xl border border-red-200 text-red-700 hover:bg-red-50 text-xs font-semibold transition min-h-[38px]"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-red-200 text-red-700 hover:bg-red-50 text-xs font-semibold transition min-h-[34px]"
                 title="Lock Curator Portal"
               >
-                <LogOut size={14} />
+                <LogOut size={13} />
                 <span className="hidden sm:inline">Sign Out</span>
               </button>
             </div>
           </div>
 
           {/* Navigation Tabs (Aligned Pill Bar) */}
-          <div className="bg-parchment-200/90 p-1.5 rounded-2xl border border-parchment-300 shadow-inner mb-6 flex items-center gap-1.5 overflow-x-auto scrollbar-none">
+          <div className="bg-parchment-200/90 p-1 rounded-xl border border-parchment-300 shadow-inner mb-4 flex items-center gap-1 overflow-x-auto scrollbar-none">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.key;
@@ -691,13 +691,13 @@ export default function CuratorPortalPage() {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 min-h-[38px] ${
+                  className={`flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all duration-200 min-h-[32px] ${
                     isActive
-                      ? "bg-maroon-800 text-white shadow-sm font-bold"
+                      ? "bg-maroon-800 text-white shadow-xs font-bold"
                       : "text-stone-700 hover:text-forest-900 hover:bg-white/80"
                   }`}
                 >
-                  <Icon size={15} className={isActive ? "text-saffron-300" : "text-stone-500"} />
+                  <Icon size={14} className={isActive ? "text-saffron-300" : "text-stone-500"} />
                   <span>{tab.label}</span>
                 </button>
               );

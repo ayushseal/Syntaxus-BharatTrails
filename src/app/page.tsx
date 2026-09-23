@@ -160,22 +160,22 @@ export default function HomePage() {
 
         {/* Search Bar */}
         <section className="relative -mt-7 px-4 md:px-6 max-w-3xl mx-auto z-10">
-          <div className="glass-card shadow-heritage-lg p-2 border border-parchment-300">
-            <div className="flex items-center gap-3 px-4">
-              <Search size={20} className="text-forest-600 shrink-0" />
+          <div className="bg-white/95 backdrop-blur-md rounded-[18px] shadow-[0_18px_40px_-8px_rgba(40,30,20,0.14),0_6px_16px_-4px_rgba(40,30,20,0.06)] border border-parchment-300/80 px-4 sm:px-5 h-[68px] sm:h-[72px] flex items-center transition-all duration-300 hover:shadow-[0_22px_48px_-8px_rgba(40,30,20,0.18)]">
+            <div className="flex items-center gap-3.5 w-full">
+              <Search size={23} className="text-forest-700 shrink-0" />
               <input
                 type="text"
                 placeholder={t("common.search")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 py-3 bg-transparent text-stone-800 placeholder:text-stone-400 
-                           focus:outline-none text-sm font-medium min-h-[44px]"
+                className="flex-1 bg-transparent text-stone-900 placeholder:text-stone-600 
+                           focus:outline-none text-sm sm:text-base font-medium tracking-tight"
                 id="monastery-search"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="text-xs text-stone-400 hover:text-stone-600 min-h-0 min-w-0 px-2 font-medium"
+                  className="text-xs text-stone-500 hover:text-stone-800 font-semibold px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 transition-colors"
                 >
                   {t("common.clear")}
                 </button>

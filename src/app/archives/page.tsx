@@ -139,30 +139,30 @@ export default function ArchivesPage() {
     <div className="min-h-screen flex flex-col bg-parchment-50">
       <Header />
       <main className="flex-1 pb-24">
-        <div className="section-padding max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-5 md:pt-7">
           {/* Header */}
-          <div className="mb-6">
-            <span className="text-xs font-bold text-saffron-600 uppercase tracking-wider bg-saffron-50 px-2.5 py-1 rounded border border-saffron-200">
+          <div className="mb-4">
+            <span className="text-[11px] font-bold text-saffron-600 uppercase tracking-wider bg-saffron-50 px-2.5 py-0.5 rounded border border-saffron-200">
               {language === "hi" ? "संरक्षण एवं स्रोत प्रमाण" : "Preservation & Provenance"}
             </span>
-            <h1 className="text-2xl md:text-4xl font-heading font-bold text-forest-700 mt-2 mb-1">
+            <h1 className="text-2xl md:text-3xl font-heading font-bold text-forest-700 mt-1.5 mb-1">
               {t("archives.title")}
             </h1>
-            <p className="text-sm text-stone-500 max-w-2xl leading-relaxed">
+            <p className="text-xs md:text-sm text-stone-500 max-w-2xl leading-relaxed">
               {t("archives.subtitle")}
             </p>
           </div>
 
           {/* Search Bar */}
-          <div className="flex gap-3 mb-6">
-            <div className="flex-1 flex items-center gap-3 px-4 py-2.5 bg-parchment-100/90 rounded-heritage border border-parchment-300 shadow-sm focus-within:ring-2 focus-within:ring-forest-400">
-              <Search size={18} className="text-forest-700 shrink-0" />
+          <div className="flex gap-3 mb-3.5">
+            <div className="flex-1 flex items-center gap-3 px-3.5 py-1.5 bg-parchment-100/90 rounded-heritage border border-parchment-300 shadow-xs focus-within:ring-2 focus-within:ring-forest-400">
+              <Search size={16} className="text-forest-700 shrink-0" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t("archives.searchPlaceholder")}
-                className="flex-1 bg-transparent text-sm text-stone-800 placeholder:text-stone-400 focus:outline-none min-h-[40px]"
+                className="flex-1 bg-transparent text-xs sm:text-sm text-stone-800 placeholder:text-stone-400 focus:outline-none min-h-[34px]"
                 id="archive-search"
               />
               {searchQuery && (
@@ -177,16 +177,16 @@ export default function ArchivesPage() {
           </div>
 
           {/* Category tabs */}
-          <div className="flex gap-2 overflow-x-auto pb-3 mb-6">
+          <div className="flex gap-1.5 overflow-x-auto pb-1 mb-4">
             {(Object.keys(categoryLabelsMap) as ArchiveCategory[]).map((key) => {
               const info = categoryLabelsMap[key];
               return (
                 <button
                   key={key}
                   onClick={() => setCategory(key)}
-                  className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all min-h-[40px] flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all min-h-[32px] flex items-center gap-1.5 ${
                     category === key
-                      ? "bg-forest-700 text-white shadow-sm"
+                      ? "bg-forest-700 text-white shadow-xs font-bold"
                       : "bg-parchment-100 text-stone-600 hover:bg-parchment-200 border border-parchment-200"
                   }`}
                 >
@@ -204,7 +204,7 @@ export default function ArchivesPage() {
           </div>
 
           {/* Archive Records List */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {filteredRecords.length === 0 ? (
               <div className="text-center py-16 heritage-border bg-parchment-50 p-8">
                 <BookOpen size={40} className="text-stone-300 mx-auto mb-3" />

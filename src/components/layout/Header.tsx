@@ -14,6 +14,7 @@ import {
   Globe,
   WifiOff,
   Shield,
+  ShieldAlert,
   Sparkles,
   ChevronDown,
   Check,
@@ -84,6 +85,7 @@ export default function Header() {
     { href: "/", label: t("nav.home"), icon: Compass },
     { href: "/explore", label: t("nav.explore"), icon: MapPin },
     { href: "/plan", label: t("nav.plan"), icon: Route },
+    { href: "/geoshield", label: t("nav.geoshield") || "GeoShield", icon: ShieldAlert, badge: "Live" },
     { href: "/archives", label: t("nav.archives"), icon: BookOpen },
     { href: "/offline", label: t("nav.offline"), icon: Download },
   ];
@@ -93,28 +95,28 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 glass-card border-b border-parchment-300 shadow-xs backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
-        <div className="flex items-center justify-between h-16 gap-2 lg:gap-3">
+      <div className="max-w-[1440px] mx-auto px-2 sm:px-4 md:px-6">
+        <div className="flex items-center justify-between h-16 gap-1.5 lg:gap-2 xl:gap-3">
           {/* Left: Mobile Menu + Logo */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 rounded-lg hover:bg-parchment-200 transition-colors lg:hidden min-h-[40px] min-w-[40px] flex items-center justify-center"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-parchment-200 transition-colors lg:hidden min-h-[36px] min-w-[36px] flex items-center justify-center"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
             >
               {menuOpen ? (
-                <X size={22} className="text-forest-700" />
+                <X size={20} className="text-forest-700" />
               ) : (
-                <Menu size={22} className="text-forest-700" />
+                <Menu size={20} className="text-forest-700" />
               )}
             </button>
 
             <BrandLogo />
           </div>
 
-          {/* Center: Structured 5 Navigation Buttons */}
+          {/* Center: Structured Navigation Buttons */}
           <nav
-            className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-parchment-200/80 p-1 rounded-full border border-parchment-300 shadow-inner backdrop-blur-sm mx-auto"
+            className="hidden lg:flex items-center gap-0.5 xl:gap-1 bg-parchment-200/80 p-0.5 xl:p-1 rounded-full border border-parchment-300 shadow-inner backdrop-blur-sm shrink"
             aria-label="Desktop navigation"
           >
             {navLinks.map((item) => {
@@ -128,29 +130,41 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-2.5 xl:px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-1.5 min-h-[32px] whitespace-nowrap ${
+                  className={`px-2 xl:px-3 py-1 xl:py-1.5 text-xs font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-1 min-h-[30px] whitespace-nowrap ${
                     isActive
                       ? "bg-forest-700 text-white shadow-sm font-bold scale-[1.02]"
                       : "text-stone-600 hover:text-forest-900 hover:bg-white/90"
                   }`}
                 >
                   <Icon
-                    size={13}
+                    size={12}
                     className={`transition-colors shrink-0 ${
-                      isActive ? "text-saffron-300" : "text-stone-400"
+                      isActive ? "text-saffron-300" : item.badge ? "text-[#145C45]" : "text-stone-400"
                     }`}
                   />
                   <span>{item.label}</span>
+                  {item.badge && (
+                    <span
+                      className="text-[9px] px-1.5 py-0.5 rounded-full font-bold tracking-wider uppercase shadow-xs shrink-0"
+                      style={{
+                        backgroundColor: "#145C45",
+                        color: "#FFFFFF",
+                        border: "1px solid #145C45",
+                      }}
+                    >
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}
           </nav>
 
           {/* Right Controls: Online Pill + Multi-Language Dropdown + Curator Portal */}
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             {/* Real online/offline indicator */}
             <div
-              className={`flex items-center gap-1.5 px-2 sm:px-2.5 py-1 rounded-full text-[11px] font-semibold transition-colors border ${
+              className={`flex items-center gap-1 px-2 py-1 rounded-full text-[11px] font-semibold transition-colors border ${
                 isOnline
                   ? "bg-forest-50 text-forest-700 border-forest-200"
                   : "bg-saffron-50 text-saffron-700 border-saffron-300 animate-pulse"
@@ -162,7 +176,7 @@ export default function Header() {
               ) : (
                 <WifiOff size={12} className="shrink-0" />
               )}
-              <span className="hidden xl:inline">{isOnline ? t("common.online") : t("common.offline")}</span>
+              <span className="hidden 2xl:inline">{isOnline ? t("common.online") : t("common.offline")}</span>
             </div>
 
             {/* Multi-Language Instant Selector */}
@@ -214,11 +228,11 @@ export default function Header() {
             {/* Curator link */}
             <Link
               href="/curator"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-maroon-800 text-white hover:bg-maroon-700 transition-all min-h-[32px] shadow-sm hover:shadow-md border border-maroon-900 shrink-0 whitespace-nowrap"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full text-xs font-bold bg-maroon-800 text-white hover:bg-maroon-700 transition-all min-h-[30px] sm:min-h-[32px] shadow-sm hover:shadow-md border border-maroon-900 shrink-0 whitespace-nowrap"
             >
-              <Shield size={13} className="text-saffron-300 shrink-0" />
-              <span className="hidden 2xl:inline">{t("common.curator")}</span>
-              <span className="inline 2xl:hidden">Curator Portal</span>
+              <Shield size={12} className="text-saffron-300 shrink-0" />
+              <span className="hidden xl:inline">Curator Portal</span>
+              <span className="inline xl:hidden">Curator</span>
             </Link>
           </div>
         </div>
@@ -248,9 +262,14 @@ export default function Header() {
                 >
                   <Icon
                     size={18}
-                    className={isActive ? "text-saffron-300" : "text-stone-400"}
+                    className={isActive ? "text-saffron-300" : item.badge ? "text-red-500" : "text-stone-400"}
                   />
                   <span>{item.label}</span>
+                  {item.badge && (
+                    <span className="ml-auto text-[10px] px-2 py-0.5 rounded-full font-bold bg-red-600 text-white animate-pulse">
+                      {item.badge}
+                    </span>
+                  )}
                 </Link>
               );
             })}

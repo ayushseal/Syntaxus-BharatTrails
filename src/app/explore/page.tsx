@@ -2,16 +2,11 @@
 
 import { useState, useEffect, useRef } from "react";
 import "maplibre-gl/dist/maplibre-gl.css";
-import Link from "next/link";
-import Image from "next/image";
 import {
   Map as MapIcon,
   List,
   Filter,
-  Eye,
   X,
-  ChevronRight,
-  Phone,
   Search,
   Building,
   Layers,
@@ -49,11 +44,11 @@ const TILE_URLS: Record<MapStyle, string[]> = {
 
 const REGIONS = [
   { id: "all", label: "All India" },
-  { id: "Northern Frontiers", label: "Northern Frontiers" },
-  { id: "Eastern Corridors", label: "Eastern Corridors" },
-  { id: "North-Eastern", label: "North-Eastern" },
+  { id: "Northern Frontiers", label: "Northern" },
+  { id: "Eastern Corridors", label: "Eastern" },
+  { id: "North-Eastern", label: "North-East" },
   { id: "Western & Central", label: "Western & Central" },
-  { id: "Southern Peninsula", label: "Southern Peninsula" },
+  { id: "Southern Peninsula", label: "Southern" },
 ];
 
 const STATES = [
@@ -627,24 +622,24 @@ export default function ExplorePage() {
       <Header />
       <main className="flex-1 pb-0">
         {/* Controls bar */}
-        <div className="sticky top-16 z-40 glass-card border-b border-parchment-200 px-4 py-3">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div className="sticky top-16 z-40 glass-card border-b border-parchment-200 px-3 sm:px-4 py-2 shadow-xs">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2">
             {/* Search Input */}
             <div className="relative flex-1 max-w-md">
-              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" />
+              <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t("explore.searchPlaceholder")}
-                className="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-parchment-300 bg-white focus:outline-none focus:border-forest-700 min-h-[38px]"
+                className="w-full pl-8 pr-4 py-1.5 text-xs rounded-lg border border-parchment-300 bg-white focus:outline-none focus:border-forest-700 min-h-[34px]"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
                   className="absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 p-1 min-h-0 min-w-0"
                 >
-                  <X size={14} />
+                  <X size={13} />
                 </button>
               )}
             </div>
@@ -652,7 +647,7 @@ export default function ExplorePage() {
             <div className="flex flex-wrap items-center gap-2">
               {/* State Dropdown */}
               <div className="flex items-center gap-1">
-                <Building size={14} className="text-forest-700" />
+                <Building size={13} className="text-forest-700 shrink-0" />
                 <select
                   value={selectedState}
                   onChange={(e) => {
@@ -661,7 +656,7 @@ export default function ExplorePage() {
                       setSelectedRegion("all");
                     }
                   }}
-                  className="px-3 py-1.5 rounded-lg border border-parchment-300 bg-white text-xs font-semibold text-stone-700 focus:outline-none min-h-[38px]"
+                  className="px-2.5 py-1 rounded-lg border border-parchment-300 bg-white text-xs font-semibold text-stone-700 focus:outline-none min-h-[34px]"
                 >
                   {STATES.map((st) => (
                     <option key={st} value={st}>
@@ -672,37 +667,37 @@ export default function ExplorePage() {
               </div>
 
               {/* View toggle */}
-              <div className="flex bg-parchment-100 rounded-lg p-1 border border-parchment-200">
+              <div className="flex bg-parchment-100 rounded-lg p-0.5 border border-parchment-200">
                 <button
                   onClick={() => handleSetViewMode("map")}
-                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all min-h-[34px] ${
+                  className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-all min-h-[30px] ${
                     viewMode === "map"
-                      ? "bg-forest-700 text-white shadow-sm font-bold"
+                      ? "bg-forest-700 text-white shadow-xs font-bold"
                       : "text-stone-500 hover:text-stone-800"
                   }`}
                 >
-                  <MapIcon size={14} />
+                  <MapIcon size={13} />
                   <span>{t("explore.mapView")}</span>
                 </button>
                 <button
                   onClick={() => handleSetViewMode("list")}
-                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all min-h-[34px] ${
+                  className={`flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold transition-all min-h-[30px] ${
                     viewMode === "list"
-                      ? "bg-forest-700 text-white shadow-sm font-bold"
+                      ? "bg-forest-700 text-white shadow-xs font-bold"
                       : "text-stone-500 hover:text-stone-800"
                   }`}
                 >
-                  <List size={14} />
+                  <List size={13} />
                   <span>{t("explore.listView")} ({filteredMonasteries.length})</span>
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Macro-Region Filter Pills */}
-          <div className="max-w-7xl mx-auto flex items-center gap-2 mt-2 pt-2 border-t border-parchment-200/60 overflow-x-auto no-scrollbar pb-0.5">
-            <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider shrink-0 flex items-center gap-1">
-              <Filter size={11} className="text-saffron-600" />
+          {/* Macro-Region Compact Filter Chips */}
+          <div className="max-w-7xl mx-auto flex items-center gap-1.5 mt-1.5 pt-1.5 border-t border-parchment-200/60 overflow-x-auto no-scrollbar pb-0.5">
+            <span className="text-[10px] font-bold text-stone-400 uppercase tracking-wider shrink-0 flex items-center gap-1">
+              <Filter size={10} className="text-saffron-600" />
               {language === "hi" ? "क्षेत्र:" : "Regions:"}
             </span>
             {REGIONS.map((reg) => (
@@ -714,7 +709,7 @@ export default function ExplorePage() {
                     setSelectedState("All States");
                   }
                 }}
-                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all min-h-[28px] ${
+                className={`px-2.5 py-0.5 rounded-full text-[11px] font-medium whitespace-nowrap transition-all min-h-[25px] ${
                   selectedRegion === reg.id
                     ? "bg-forest-700 text-white font-bold shadow-xs"
                     : "bg-white text-stone-600 border border-parchment-300 hover:bg-parchment-100"
@@ -728,7 +723,7 @@ export default function ExplorePage() {
 
         {/* Map View */}
         {viewMode === "map" && (
-          <div className="relative w-full h-[calc(100vh-140px)] min-h-[600px] bg-parchment-100">
+          <div className="relative w-full h-[calc(100vh-125px)] min-h-[620px] bg-parchment-100">
             {/* MapLibre container */}
             <div
               ref={mapContainerRef}

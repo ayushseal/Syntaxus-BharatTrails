@@ -20,10 +20,10 @@ export function HeritageEmblem({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
     >
       <Image
         src="/images/brand/logo.png"
-        alt="Bharat Heritage & Tourism Atlas Official Emblem"
-        fill
-        className="object-contain p-0.5 group-hover:scale-105 transition-transform duration-300"
-        sizes="(max-width: 768px) 36px, 48px"
+        alt="Bharat Trails Official Emblem"
+        width={40}
+        height={40}
+        className="w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-300"
         priority
       />
     </div>
@@ -33,8 +33,8 @@ export function HeritageEmblem({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
 export default function BrandLogo({ size = "md", className = "", showText = true }: BrandLogoProps) {
   const { language } = useI18n();
 
-  const titleEn = "BHARAT HERITAGE & TOURISM ATLAS";
-  const titleHi = "भारत धरोहर एवं पर्यटन एटलस";
+  const titleEn = "Bharat Trails";
+  const titleHi = "भारत ट्रेल्स";
   const displayTitle = language === "hi" ? titleHi : titleEn;
 
   return (
@@ -43,8 +43,8 @@ export default function BrandLogo({ size = "md", className = "", showText = true
 
       {showText && (
         <div className="flex flex-col justify-center select-none min-w-0">
-          {/* TOP & BOLD: Bharat Heritage and Tourism Atlas */}
-          <span className="text-[11px] sm:text-xs md:text-[13px] lg:text-[14px] font-heading font-black text-forest-900 leading-tight tracking-tight uppercase group-hover:text-forest-700 transition-colors whitespace-nowrap">
+          {/* TOP & BOLD: Bharat Trails */}
+          <span className="text-xs sm:text-[13px] md:text-[14px] lg:text-[15px] font-heading font-black text-forest-900 leading-tight tracking-tight uppercase group-hover:text-forest-700 transition-colors whitespace-nowrap">
             {displayTitle}
           </span>
 
