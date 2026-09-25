@@ -22,7 +22,7 @@ export default function Footer() {
                   {language === "hi" ? "भारत ट्रेल्स" : "BHARAT TRAILS"}
                 </h3>
                 <p className="text-xs font-bold text-saffron-400 tracking-[0.2em] uppercase mt-0.5">
-                  SYNTAXUS · AICTE PS ID 26202
+                  SYNTAXUS · AICTE PS ID 26204
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
             </ul>
             <div className="mt-4 p-2.5 rounded-xl bg-forest-900/60 border border-forest-800 text-[11px] text-parchment-300">
-              <span className="font-bold text-saffron-400">Problem Statement ID:</span> 26202
+              <span className="font-bold text-saffron-400">Problem Statement ID:</span> 26204
               <p className="text-[10px] text-parchment-400/80 mt-0.5">Empowering Local Artisans, Hotels & Heritage Stewards</p>
             </div>
           </div>

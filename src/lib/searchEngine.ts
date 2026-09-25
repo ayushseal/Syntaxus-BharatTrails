@@ -146,7 +146,7 @@ export const HERITAGE_SEO_ALIASES: Record<string, string[]> = {
     "sendra island",
   ],
 
-  // --- Central & Deccan Sultanates / Forts (AICTE PS ID 26202 Expansion) ---
+  // --- Central & Deccan Sultanates / Forts (AICTE PS ID 26204 Expansion) ---
   ramappa: [
     "ramappa",
     "ramapa",

@@ -257,7 +257,7 @@ CREATE INDEX IF NOT EXISTS idx_archives_site_id ON archives(site_id);
 CREATE INDEX IF NOT EXISTS idx_audit_logs_user_id ON audit_logs(user_id);
 CREATE INDEX IF NOT EXISTS idx_audit_logs_timestamp ON audit_logs(timestamp DESC);
 
--- 12. Verified Local Services & Hospitality Engine (AICTE PS ID 26202)
+-- 12. Verified Local Services & Hospitality Engine (AICTE PS ID 26204)
 CREATE TABLE IF NOT EXISTS nearby_services (
     id VARCHAR(64) PRIMARY KEY,
     site_id VARCHAR(64) NOT NULL REFERENCES heritage_sites(id) ON DELETE CASCADE,

@@ -714,7 +714,7 @@ export async function getAuditLogs(): Promise<any[]> {
       target_id: "Warangal Brass & Metalcraft Guild",
       timestamp: new Date(Date.now() - 1000 * 60 * 850).toISOString(),
       status: "approved",
-      notes: "Verified and accredited local artisan cooperative for sustainable heritage economy (AICTE PS ID 26202).",
+      notes: "Verified and accredited local artisan cooperative for sustainable heritage economy (AICTE PS ID 26204).",
     },
     {
       id: "a7",
